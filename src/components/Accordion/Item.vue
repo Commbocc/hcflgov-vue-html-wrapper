@@ -9,7 +9,7 @@
     </a>
 
     <div ref="collapse" :id="`collapse${_uid}`" :aria-labelledby="`heading${_uid}`" class="collapse" :data-parent="parentAttr">
-      <div class="card-body">
+      <div class="card-body" :class="(flush) ? 'p-0' : null">
         <!-- @slot Place the content of the accrodion item here -->
         <slot></slot>
       </div>
@@ -32,6 +32,13 @@ export default {
     * Expanded on mount
     */
     open: {
+      type: Boolean,
+      default: false
+    },
+    /**
+    * Removes the card body's padding
+    */
+    flush: {
       type: Boolean,
       default: false
     }
