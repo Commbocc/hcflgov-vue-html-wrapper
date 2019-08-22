@@ -21,20 +21,20 @@
           <div class="rte" v-html="body"></div>
 
           <!-- article meta -->
-          <div class="row justify-content-center align-items-center my-3">
-            <div class="col text-center text-sm-left text-muted small">
+          <div class="row justify-content-between align-items-center my-3">
+            <div class="col-sm-6 text-center text-sm-left text-muted small">
               Posted {{ publishDate.toLocaleString() }} in {{ category }}
             </div>
-            <div class="col btn-group btn-group-sm justify-content-center justify-content-sm-end" role="group" aria-label="Share this article">
-              <button type="button" class="btn btn-outline-light btn-sm text-muted">
-                <span class="lead fab fa-facebook"></span>
-              </button>
-              <button type="button" class="btn btn-outline-light btn-sm text-muted">
-                <span class="lead fab fa-twitter"></span>
-              </button>
-              <button type="button" class="btn btn-outline-light btn-sm text-muted">
-                <span class="lead fab fa-linkedin"></span>
-              </button>
+            <div class="col-sm-6 text-center text-sm-right" aria-label="Share this article">
+              <a href="#" class="p-2 m-1 v-card badge badge-light text-muted">
+                <span class="lead fab fa-fw fa-facebook"></span>
+              </a>
+              <a href="#" class="p-2 m-1 v-card badge badge-light text-muted">
+                <span class="lead fab fa-fw fa-twitter"></span>
+              </a>
+              <a href="#" class="p-2 m-1 v-card badge badge-light text-muted">
+                <span class="lead fab fa-fw fa-linkedin"></span>
+              </a>
             </div>
           </div>
 
@@ -50,7 +50,7 @@
 
           <!-- related articles -->
           <div class="card mb-3">
-            <div class="card-header font-weight-bold text-secondary">
+            <div class="card-header border-0 font-weight-bold text-secondary">
               <span aria-label="hidden" class="fas fa-newspaper"></span>
               Related Articles
             </div>
