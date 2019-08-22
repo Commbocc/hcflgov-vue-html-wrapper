@@ -34,18 +34,14 @@
           <!-- @slot When `customNav` is set to true custom [Bootstrap `.nav-items`](https://getbootstrap.com/docs/4.3/components/navbar/) can be used -->
           <slot v-if="customNav"></slot>
 
+
           <li v-else v-for="link in navLinks" class="nav-item order-lg-1 dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ link.Name }}
             </a>
-            <div class="dropdown-menu">
-              <h4 class="d-none d-lg-block text-info font-serif font-weight-bold">{{ link.Name }}</h4>
-              <div class="dropdown-menu-2-col">
-                <a v-for="child in link.Children" class="dropdown-item" :href="xLink(child)" :target="linkTargets">
-                  {{ child.Name }}
-                </a>
-              </div>
-            </div>
+
+            <div is="Dropdown" :link="link"></div>
+
           </li>
 
         </ul>
@@ -59,12 +55,16 @@
 <script>
 import axios from 'axios'
 import Links from '../../mixins/links'
+import Dropdown from './Dropdown'
 import SearchForm from './SearchForm'
 
 export default {
   name: 'hc-navbar',
   mixins: [Links],
-  components: { SearchForm },
+  components: {
+    Dropdown,
+    SearchForm
+  },
   mounted () {
     if (!this.customNav) {
       this.fetchNavLinks()

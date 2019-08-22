@@ -40,6 +40,7 @@
       position: absolute;
       left: 0;
       right: 0;
+      top: calc(100% - 2px);
       padding: $grid-gutter-width;
       background: $body-bg;
       border-bottom: solid 1px theme-color('secondary');
@@ -61,7 +62,7 @@
 // search
 #hc-nav-search-input-group {
   & > .form-control {
-    @extend .font-serif ;
+    @extend .font-accent ;
     background: none;
     font-style: italic;
     -webkit-box-shadow: none;
