@@ -11,10 +11,12 @@
 
 <script>
 import VParallax from 'vuetify/lib/components/VParallax'
+import GradientMixin from '../mixins/gradient'
 
 export default {
   name: 'hc-parallax',
   components: { VParallax },
+  mixins: [GradientMixin],
   props: {
     /**
     * The image source of the background image
@@ -29,19 +31,6 @@ export default {
     height: {
       type: Number,
       default: 350
-    },
-    /**
-    * The Bootstrap color class of the gradient<br>
-    * `primary, dark, light, info, success, warning, danger`
-    */
-    gradient: {
-      type: String,
-      default: 'primary'
-    }
-  },
-  computed: {
-    gradientClass () {
-      return `gradient-diag-${this.gradient}`
     }
   }
 }

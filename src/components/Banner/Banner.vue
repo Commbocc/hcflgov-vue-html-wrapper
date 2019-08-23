@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="jumbotron-bg-cover" :style="backgroundStyle">
-    <div class="gradient-diag-danger pt-sm-5 d-flex align-items-end h-100">
+    <div :class="gradientClass" class="pt-sm-5 d-flex align-items-end h-100">
       <div class="container pt-4 px-sm-4 bg-white">
 
         <h1 class="mt-0 text-left text-dark font-weight-bold display-3" id="dynamicallyGeneratedSectionId1">
@@ -23,8 +23,11 @@
 </template>
 
 <script>
+import GradientMixin from '../../mixins/gradient'
+
 export default {
   name: 'hc-banner',
+  mixins: [GradientMixin],
   props: {
     /**
     * Sets the H1 of the banner
