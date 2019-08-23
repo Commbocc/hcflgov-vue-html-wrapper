@@ -18,16 +18,26 @@
       <!-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/G1 -->
       <nav is="hc-navbar" logo-href="./" skip-content-link="#main-content" class="v-card"></nav>
 
-      <div v-if="jumbo" is="hc-parallax" class="text-center text-shadow">
-        <h1 class="font-weight-bold display-2">
-          {{ pageTitle }}
-        </h1>
-        <span class="h2 font-italic">
-          Established 1834
-        </span>
+      <div v-if="jumbo" is="hc-parallax" :gradient="jumboGradient" class="text-center text-shadow">
+        <div v-if="jumboAlt" class="">
+          <h1 class="font-weight-bold display-2">
+            {{ pageTitle }}
+          </h1>
+          <span class="h2 font-italic">
+            Established 1834
+          </span>
+        </div>
+        <div v-else class="">
+          <span class="h2 font-italic">
+            welcome to
+          </span>
+          <h1 class="font-weight-bold display-2">
+            HCFLGOV.NET
+          </h1>
+        </div>
       </div>
 
-      <ol v-else is="hc-banner" :title="pageTitle">
+      <ol v-else is="hc-banner" :gradient="jumboGradient" :title="pageTitle">
         <li class="breadcrumb-item"><a href="./">Home</a></li>
       </ol>
     </header>
@@ -64,7 +74,10 @@ export default {
     selected: Object.keys(demoViews)[0],
     alert: false,
     jumbo: true,
-    pageTitle: null
+    jumboGradient: 'primary',
+    jumboAlt: true,
+    pageTitle: null,
+    swapNews: false
   }),
   computed: {
     views () {

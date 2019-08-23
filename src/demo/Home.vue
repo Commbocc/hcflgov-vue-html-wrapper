@@ -1,8 +1,8 @@
 <template lang="html">
-  <main aria-labelledby="home-h1">
+  <main aria-labelledby="home-h1" class="d-flex flex-column">
 
     <!--  -->
-    <section v-if="true" class="bg-light py-5" aria-labelledby="dynamicallyGeneratedSectionId1">
+    <section v-if="true" class="bg-light py-5 order-1" aria-labelledby="dynamicallyGeneratedSectionId1">
       <div class="container">
 
         <h2 class="mt-0 text-left text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId1">
@@ -40,7 +40,7 @@
     </section>
 
     <!--  -->
-    <section class="bg-white py-5" aria-labelledby="dynamicallyGeneratedSectionId2">
+    <section :class="$parent.swapNews ? 'order-4' : 'order-2'" class="bg-white py-5" aria-labelledby="dynamicallyGeneratedSectionId2">
       <div class="container">
 
         <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
@@ -61,7 +61,7 @@
     </section>
 
     <!--  -->
-    <section class="py-4 bg-dark gradient-diag-dark text-light">
+    <section class="py-4 bg-dark order-3 gradient-diag-dark text-light">
       <div class="container text-center">
         <strong class="text-primary">
           Some kind of an announcement, not too serious!
@@ -71,7 +71,7 @@
     </section>
 
     <!--  -->
-    <section class="bg-white py-5">
+    <section :class="$parent.swapNews ? 'order-2' : 'order-4'" class="bg-white py-5">
       <div class="container">
 
         <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
@@ -121,7 +121,7 @@
     </section>
 
     <!--  -->
-    <section class="bg-light py-5">
+    <section class="bg-light py-5 order-12">
       <div class="container">
 
         <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
