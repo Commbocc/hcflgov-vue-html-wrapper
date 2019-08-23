@@ -4890,12 +4890,12 @@ var IconButton_component = normalizeComponent(
 )
 
 /* harmony default export */ var IconButton = (IconButton_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"793014ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Parallax.vue?vue&type=template&id=e49c038a&lang=html&
-var Parallaxvue_type_template_id_e49c038a_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-parallax',{attrs:{"dark":"","src":_vm.src,"height":_vm.height}},[_c('div',{staticClass:"d-flex align-items-center h-100",class:_vm.gradientClass},[_c('div',{staticClass:"container"},[_vm._t("default")],2)])])}
-var Parallaxvue_type_template_id_e49c038a_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"793014ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Parallax.vue?vue&type=template&id=3d1a0241&lang=html&
+var Parallaxvue_type_template_id_3d1a0241_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-parallax',{attrs:{"dark":"","src":_vm.src,"height":_vm.height}},[_c('div',{staticClass:"d-flex align-items-center h-100",class:_vm.gradientClass},[_c('div',{staticClass:"container"},[_vm._t("default")],2)])])}
+var Parallaxvue_type_template_id_3d1a0241_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Parallax.vue?vue&type=template&id=e49c038a&lang=html&
+// CONCATENATED MODULE: ./src/components/Parallax.vue?vue&type=template&id=3d1a0241&lang=html&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.constructor.js
 var es6_number_constructor = __webpack_require__("c5f6");
@@ -5066,6 +5066,27 @@ function mixins() {
 
 /* harmony default export */ var components_VParallax = (VParallax);
 //# sourceMappingURL=index.js.map
+// CONCATENATED MODULE: ./src/mixins/gradient.js
+/**
+ * @mixin
+ */
+/* harmony default export */ var gradient = ({
+  props: {
+    /**
+    * The Bootstrap color class of the gradient<br>
+    * `primary, dark, light, info, success, warning, danger`
+    */
+    gradient: {
+      type: String,
+      default: 'primary'
+    }
+  },
+  computed: {
+    gradientClass: function gradientClass() {
+      return "gradient-diag-".concat(this.gradient);
+    }
+  }
+});
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Parallax.vue?vue&type=script&lang=js&
 
 //
@@ -5080,11 +5101,13 @@ function mixins() {
 //
 //
 
+
 /* harmony default export */ var Parallaxvue_type_script_lang_js_ = ({
   name: 'hc-parallax',
   components: {
     VParallax: components_VParallax
   },
+  mixins: [gradient],
   props: {
     /**
     * The image source of the background image
@@ -5100,20 +5123,6 @@ function mixins() {
     height: {
       type: Number,
       default: 350
-    },
-
-    /**
-    * The Bootstrap color class of the gradient<br>
-    * `primary, dark, light, info, success, warning, danger`
-    */
-    gradient: {
-      type: String,
-      default: 'primary'
-    }
-  },
-  computed: {
-    gradientClass: function gradientClass() {
-      return "gradient-diag-".concat(this.gradient);
     }
   }
 });
@@ -5133,8 +5142,8 @@ var Parallaxvue_type_style_index_0_lang_scss_ = __webpack_require__("b4b6");
 
 var Parallax_component = normalizeComponent(
   components_Parallaxvue_type_script_lang_js_,
-  Parallaxvue_type_template_id_e49c038a_lang_html_render,
-  Parallaxvue_type_template_id_e49c038a_lang_html_staticRenderFns,
+  Parallaxvue_type_template_id_3d1a0241_lang_html_render,
+  Parallaxvue_type_template_id_3d1a0241_lang_html_staticRenderFns,
   false,
   null,
   null,
@@ -5347,12 +5356,12 @@ var Item_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/Accordion/index.js
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"793014ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Banner/Banner.vue?vue&type=template&id=6b718f53&lang=html&
-var Bannervue_type_template_id_6b718f53_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"jumbotron-bg-cover",style:(_vm.backgroundStyle)},[_c('div',{staticClass:"gradient-diag-danger pt-sm-5 d-flex align-items-end h-100"},[_c('div',{staticClass:"container pt-4 px-sm-4 bg-white"},[_c('h1',{staticClass:"mt-0 text-left text-dark font-weight-bold display-3",attrs:{"id":"dynamicallyGeneratedSectionId1"}},[_vm._v("\n        "+_vm._s(_vm.title)+"\n      ")]),_c('hr',{staticClass:"bg-dark m-0 pt-1"}),_c('nav',{attrs:{"aria-label":"Breadcrumb Navigation"}},[_c('ol',{staticClass:"breadcrumb small mb-0"},[_vm._t("default"),_c('li',{staticClass:"breadcrumb-item active",attrs:{"aria-current":"page"}},[_vm._v(_vm._s(_vm.title))])],2)])])])])}
-var Bannervue_type_template_id_6b718f53_lang_html_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"793014ba-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Banner/Banner.vue?vue&type=template&id=56e22c80&lang=html&
+var Bannervue_type_template_id_56e22c80_lang_html_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"jumbotron-bg-cover",style:(_vm.backgroundStyle)},[_c('div',{staticClass:"pt-sm-5 d-flex align-items-end h-100",class:_vm.gradientClass},[_c('div',{staticClass:"container pt-4 px-sm-4 bg-white"},[_c('h1',{staticClass:"mt-0 text-left text-dark font-weight-bold display-3",attrs:{"id":"dynamicallyGeneratedSectionId1"}},[_vm._v("\n        "+_vm._s(_vm.title)+"\n      ")]),_c('hr',{staticClass:"bg-dark m-0 pt-1"}),_c('nav',{attrs:{"aria-label":"Breadcrumb Navigation"}},[_c('ol',{staticClass:"breadcrumb small mb-0"},[_vm._t("default"),_c('li',{staticClass:"breadcrumb-item active",attrs:{"aria-current":"page"}},[_vm._v(_vm._s(_vm.title))])],2)])])])])}
+var Bannervue_type_template_id_56e22c80_lang_html_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Banner/Banner.vue?vue&type=template&id=6b718f53&lang=html&
+// CONCATENATED MODULE: ./src/components/Banner/Banner.vue?vue&type=template&id=56e22c80&lang=html&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Banner/Banner.vue?vue&type=script&lang=js&
 //
@@ -5379,8 +5388,10 @@ var Bannervue_type_template_id_6b718f53_lang_html_staticRenderFns = []
 //
 //
 //
+
 /* harmony default export */ var Bannervue_type_script_lang_js_ = ({
   name: 'hc-banner',
+  mixins: [gradient],
   props: {
     /**
     * Sets the H1 of the banner
@@ -5416,8 +5427,8 @@ var Bannervue_type_template_id_6b718f53_lang_html_staticRenderFns = []
 
 var Banner_component = normalizeComponent(
   Banner_Bannervue_type_script_lang_js_,
-  Bannervue_type_template_id_6b718f53_lang_html_render,
-  Bannervue_type_template_id_6b718f53_lang_html_staticRenderFns,
+  Bannervue_type_template_id_56e22c80_lang_html_render,
+  Bannervue_type_template_id_56e22c80_lang_html_staticRenderFns,
   false,
   null,
   null,
