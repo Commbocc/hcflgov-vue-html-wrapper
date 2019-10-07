@@ -10,9 +10,18 @@
 npm i --save @hcflgov/vue-html-wrapper
 ```
 
+```js
+import HcHtmlWrapper from '@hcflgov/vue-html-wrapper'
+Vue.use(HcHtmlWrapper)
+```
+
 ### CDN
 
-https://unpkg.com/@hcflgov/vue-html-wrapper/dist/
+[https://unpkg.com/@hcflgov/vue-html-wrapper/dist/](https://unpkg.com/@hcflgov/vue-html-wrapper/dist/)
+
+```html
+<script src="https://unpkg.com/@hcflgov/vue-html-wrapper"></script>
+```
 
 ## Basic Use
 
@@ -21,7 +30,7 @@ https://unpkg.com/@hcflgov/vue-html-wrapper/dist/
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="dist/HcHtmlWrapper.css">
+  <link rel="stylesheet" href="https://unpkg.com/@hcflgov/vue-html-wrapper/dist/HcHtmlWrapper.css">
 </head>
 <body>
 
@@ -45,14 +54,10 @@ https://unpkg.com/@hcflgov/vue-html-wrapper/dist/
   </div>
 
   <script src="https://unpkg.com/vue@2.6.6/dist/vue.js"></script>
-  <script src="dist/HcHtmlWrapper.umd.min.js"></script>
+  <script src="https://unpkg.com/@hcflgov/vue-html-wrapper"></script>
 
   <script type="text/javascript">
-  Vue.use(HcHtmlWrapper)
-
-  new Vue({
-    el: '#hc-main'
-  })
+  new Vue().$mount('#hc-main')
   </script>
 </body>
 </html>

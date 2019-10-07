@@ -117,17 +117,8 @@
 
         </div>
 
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center flex-wrap">
-            <li class="page-item disabled">
-              <a class="page-link m-1 v-card" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-            </li>
-            <li v-for="n in 7" class="page-item"><a class="page-link m-1 v-card" href="#">{{ n }}</a></li>
-            <li class="page-item">
-              <a class="page-link m-1 v-card" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
+        <!-- pagination -->
+        <div is="HcPagination" :paging="pagination"></div>
 
       </div>
     </section>
@@ -176,7 +167,8 @@ import posts from './posts'
 
 export default {
   data: () => ({
-    posts: []
+    posts: [],
+    pagination:  {"current": 2,"previous": 1,"next": 3,"per_page": 15,"pages": 18,"count": 261}
   }),
   mounted () {
     this.posts = posts

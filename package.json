@@ -6,7 +6,7 @@
   "author": "Kevin McCarthy <mccarthyk@hcflgov.net>",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name HcHtmlWrapper --formats umd,umd-min",
+    "build": "vue-cli-service build --target lib --name HcHtmlWrapper --formats umd-min",
     "build-demo": "vue-cli-service build --dest demo",
     "build-all": "npm run build && npm run build-demo && npm run styleguide:build",
     "styleguide": "vue-cli-service styleguidist",

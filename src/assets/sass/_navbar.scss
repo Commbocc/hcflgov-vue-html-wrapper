@@ -59,6 +59,29 @@
   }
 }
 
+// i want to
+#navbar-dropdown-i-want-to {
+  @include media-breakpoint-up(lg) {
+    background: $secondary;
+
+    .list-group-item {
+      color: #fff;
+      background: none;
+      &:hover {
+        background: rgba(#12314C, 1);
+      }
+    }
+  }
+
+  .icon {
+    max-width: 65px;
+    @include media-breakpoint-down(lg) {
+      border-color: rgba($dark, 0.75) !important;
+    }
+  }
+
+}
+
 // search
 #hc-nav-search-input-group {
   & > .form-control {
@@ -85,5 +108,11 @@
 .hc-nav-search-dropdown-menu {
   @include media-breakpoint-down(md) {
     display: block;
+  }
+}
+
+.navbar-nav {
+  .nav-link.active {
+    text-decoration: underline;
   }
 }

@@ -7,6 +7,8 @@ $success:     #9bd63c !default;
 $info:        #7ABFD7 !default;
 $warning:     #f0ad4e !default;
 $danger:      #f1463c !default;
+// $dark:        #4a535d !default;
+$dark:        #495057 !default;
 
 // $body-bg:     #f5f7f8 !default;
 $body-bg:     #fff !default;
@@ -28,6 +30,10 @@ $nav-tabs-link-active-color:           $secondary !default;
 $nav-tabs-link-active-bg:              #fff !default;
 $nav-tabs-link-active-border-color:    #ddd !default;
 
+$navbar-dark-color:                 rgba(#fff, .75) !default;
+$navbar-dark-hover-color:           rgba(#fff, 1) !default;
+$navbar-dark-active-color:          $primary !default;
+
 // accessible colors
 $accessible-color-info-bg: #2A2A2A;
 // $accessible-color-info-bg: theme-color("secondary");
@@ -37,3 +43,13 @@ $breadcrumb-divider:            "\203A" !default;
 $breadcrumb-divider-color:      $gray-600 !default;
 $breadcrumb-active-color:       $accessible-color-info-bg !default;
 $breadcrumb-padding-x:          0 !default;
+
+// Pagination
+$pagination-color:            $secondary !default;
+$pagination-hover-color:      $info !default;
+
+// $display sizes
+$display1-size:               5.5rem !default;
+$display2-size:               5rem !default;
+$display3-size:               4rem !default;
+$display4-size:               3rem !default;

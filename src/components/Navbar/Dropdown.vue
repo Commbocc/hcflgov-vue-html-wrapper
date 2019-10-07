@@ -1,26 +1,33 @@
 <template lang="html">
   <div class="dropdown-menu" :class="(isWantTo) ? 'p-0' : null">
 
-    <div v-if="isWantTo" class="">
+    <!-- i want to -->
+    <div v-if="isWantTo" id="navbar-dropdown-i-want-to" class="">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <a v-for="(child, i) in link.Children" :href="xLink(child)" class="col-lg list-group-item border-left-0 border-right-0 list-group-item-action p-2 p-lg-5 d-flex align-items-center">
 
-      <div class="row no-gutters">
-        <a v-for="child in link.Children" :href="xLink(child)" class="col-md list-group-item-secondary list-group-item-action p-2 p-md-5 text-dark d-flex align-items-center">
+            <div class="icon embed-responsive embed-responsive-1by1 border border-light rounded-circle mr-2">
+              <div class="embed-responsive-item text-center d-flex flex-column">
+                <i :class="wantToIcons[i]" class="fa-2x text-primary my-auto"></i>
+              </div>
+            </div>
 
-          <span class="fa fa-newspaper display-4 fa-2x fa-fw mr-3"></span>
-
-          <div class="">
-            <span class="h3 mb-0 font-weight-bold d-block">
-              {{ child.Name }}
-            </span>
-            <small class="d-block">
-              {{ child.Description }}
-            </small>
-          </div>
-        </a>
+            <div class="">
+              <span class="h4 mb-0 font-weight-bold d-block">
+                {{ child.Name }}
+              </span>
+              <small class="d-block">
+                {{ child.Description }}
+              </small>
+            </div>
+            
+          </a>
+        </div>
       </div>
-
     </div>
 
+    <!-- default -->
     <template v-else>
       <h4 class="d-none d-lg-block text-info font-weight-bold">{{ link.Name }}</h4>
 
@@ -43,6 +50,15 @@ export default {
   computed: {
     isWantTo () {
       return (this.link.Guid == 'acce922f-9f4a-4ee1-abe5-7370ce8785f3') ? true : false
+    },
+    wantToIcons () {
+      return [
+        'far fa-clipboard',
+        'fas fa-user-plus',
+        'fas fa-bullhorn',
+        'fas fa-concierge-bell',
+        'fas fa-dollar-sign',
+      ]
     }
   }
 }

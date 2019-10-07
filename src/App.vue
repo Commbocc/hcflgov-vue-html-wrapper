@@ -1,18 +1,19 @@
 <script>
-import defaultOptions from './options'
-import * as components from './components'
+const inBrowser = typeof window !== 'undefined'
+// import defaultOptions from './options'
+import components from './components'
 
-export default {
-  install (Vue, options) {
-    options = Object.assign(defaultOptions, options)
+let App; export default App = {
+  install (Vue) {
+    // options = Object.assign(defaultOptions, options)
 
     Vue.prototype.$hcHtmlWrapper = new Vue({
       ...this,
-      ...options
+      // ...options
     })
 
     Vue.mixin({
-      components: { ...components }
+      mixins: [components]
     })
   },
   data: () => ({
@@ -27,6 +28,10 @@ export default {
     //   return 'https://www.hillsboroughcounty.org/apis/v1/endpoints/footer'
     // }
   }
+}
+
+if (inBrowser && window.Vue) {
+  window.Vue.use(App)
 }
 </script>
 

@@ -1,11 +1,12 @@
 const webpack = require('webpack')
 
 module.exports = {
-  publicPath: './',
-  filenameHashing: false,
   css: {
     extract: true
   },
+  filenameHashing: false,
+  productionSourceMap: false,
+  // publicPath: './',
   configureWebpack: {
     plugins: [
       new webpack.ProvidePlugin({

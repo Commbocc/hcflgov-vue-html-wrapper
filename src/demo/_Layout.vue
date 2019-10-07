@@ -43,7 +43,9 @@
     </header>
 
     <!-- sudo router -->
-    <main :is="selected" id="main-content"></main>
+    <div class="">
+      <main :is="selected" id="main-content"></main>
+    </div>
 
     <!-- footer -->
     <footer is="hc-footer" class="mt-auto"></footer>
