@@ -7,10 +7,9 @@
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), -webkit-transform 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .icon.expanded[data-v-73c17e1e] {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
-
 .v-parallax {
   position: relative;
   overflow: hidden;
@@ -60,4 +59,3 @@
 .v-parallax__content {
   padding: 0;
 }
-

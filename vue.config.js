@@ -6,7 +6,7 @@ module.exports = {
   },
   filenameHashing: false,
   productionSourceMap: false,
-  // publicPath: './',
+  publicPath: './',
   configureWebpack: {
     plugins: [
       new webpack.ProvidePlugin({
