@@ -72,14 +72,6 @@
       }
     }
   }
-
-  .icon {
-    max-width: 65px;
-    @include media-breakpoint-down(lg) {
-      border-color: rgba($dark, 0.75) !important;
-    }
-  }
-
 }
 
 // search

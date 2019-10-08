@@ -4,14 +4,10 @@
     <!-- i want to -->
     <div v-if="isWantTo" id="navbar-dropdown-i-want-to" class="">
       <div class="container-fluid">
-        <div class="row no-gutters">
-          <a v-for="(child, i) in link.Children" :href="xLink(child)" class="col-lg list-group-item border-left-0 border-right-0 list-group-item-action p-2 p-lg-5 d-flex align-items-center">
+        <div class="row no-gutters justify-content-center">
+          <a v-for="(child, i) in link.Children" :href="xLink(child)" class="col-lg list-group-item border-left-0 border-right-0 list-group-item-action p-2 p-lg-3 p-xl-4 d-flex align-items-center">
 
-            <div class="icon embed-responsive embed-responsive-1by1 border border-light rounded-circle mr-2">
-              <div class="embed-responsive-item text-center d-flex flex-column">
-                <i :class="wantToIcons[i]" class="fa-2x text-primary my-auto"></i>
-              </div>
-            </div>
+            <i :class="wantToIcons[i]" class="fa-2x fa-fw text-primary mr-3"></i>
 
             <div class="">
               <span class="h4 mb-0 font-weight-bold d-block">
@@ -21,7 +17,7 @@
                 {{ child.Description }}
               </small>
             </div>
-            
+
           </a>
         </div>
       </div>
