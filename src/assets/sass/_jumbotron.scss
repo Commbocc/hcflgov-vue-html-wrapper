@@ -6,4 +6,10 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat;
+
+  .container {
+    @include media-breakpoint-up(sm) {
+      width: 96%;
+    }
+  }
 }
