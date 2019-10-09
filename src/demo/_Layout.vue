@@ -36,15 +36,23 @@
           </h1>
         </div>
       </div>
-
-      <ol v-else is="hc-banner" :gradient="jumboGradient" :title="pageTitle">
-        <li class="breadcrumb-item"><a href="./">Home</a></li>
-      </ol>
     </header>
 
     <!-- sudo router -->
     <div class="">
-      <main :is="selected" id="main-content"></main>
+      <div class="d-flex">
+        <div v-if="false" class="order-12">
+          Aside
+        </div>
+
+        <div class="flex-grow-1 order-1">
+          <ol v-if="!jumbo" is="hc-banner" :gradient="jumboGradient" :title="pageTitle">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+          </ol>
+
+          <main :is="selected" id="main-content"></main>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->
