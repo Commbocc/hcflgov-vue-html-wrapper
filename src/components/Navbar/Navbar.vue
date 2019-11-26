@@ -9,11 +9,11 @@
         <img src="../../assets/hc-logo-horizontal-RGB.png" alt="Hillsborough County Logo" class="logo">
       </a>
 
-      <button ref="navToggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button ref="navToggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hc-navbar-collapse" aria-controls="hc-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="hc-navbar-collapse">
 
         <ul class="navbar-nav ml-auto">
 

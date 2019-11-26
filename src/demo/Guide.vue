@@ -2,7 +2,7 @@
   <main>
 
     <!--  -->
-    <section v-if="false" class="bg-dark gradient-diag-dark v-card sticky-top">
+    <section v-if="true" class="guide-navbar-containr bg-dark gradient-diag-dark v-card sticky-top">
       <div class="container">
         <nav id="spy-target" class="navbar navbar-dark navbar-expand-md">
           <span class="lead text-light d-md-none">Guide Menu</span>
@@ -15,13 +15,19 @@
                 <a class="nav-link" href="#quicklinks">Quick Links</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#what-can-i-recycle">What Can I Recycle?</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#upcomingevents">Upcoming Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#video">A Video</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#tips">Tips</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#trending">Trending</a>
               </li>
             </ul>
           </div>
@@ -45,7 +51,7 @@
     </section>
 
     <!--  -->
-    <div is="hc-parallax" gradient="success" src="http://tampabayrecycles.org/assets/images/recycle-art.png" class="text-center text-shadow v-card">
+    <div id="what-can-i-recycle" is="hc-parallax" gradient="light" src="http://tampabayrecycles.org/assets/images/recycle-art.png" class="text-center text-shadow v-card">
       <div class="">
         <h2 class="font-weight-bold display-4">
           What Can I Recycle?
@@ -91,11 +97,118 @@
       </div>
     </section>
 
+    <section id="video" class="bg-light gradient-diag-dark py-sm-5">
+      <div class="container embed-responsive embed-responsive-16by9 my-sm-5">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+      </div>
+    </section>
+
     <!--  -->
-    <section class="py-5">
+    <section id="tips" class="py-5 bg-white">
       <div class="container">
 
-        <p v-for="n in 30">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="mt-0 text-left text-dark font-weight-bold display-4">
+          Trash &amp; Recycling Tips
+        </h2>
+
+        <hr class="bg-dark mt-0 pt-1">
+
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p class="lead">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <hr class="my-5">
+
+        <div class="row align-items-center">
+          <div class="col-md-5 order-md-12">
+            <img src="https://picsum.photos/seed/15/800" class="img-fluid d-block mx-auto v-card mb-3">
+          </div>
+
+          <div class="col-md-7 order-md-1">
+            <p class="display-4 text-primary">Lorem ipsum dolor sit amet quia et suscipit</p>
+            <ul>
+
+              <li>Place trash in a container with a lid or use a sturdy trash bag.</li>
+              <li>Place recycling on the curb in a City-issued, recycling cart. Contact BOS:311 to request a new recycling cart, but keep in mind they are not available until March. </li>
+              <li>Do not use small plastic and paper bags from market or convenience stores for trash or recycling on your curb. </li>
+              <li>You can turn a trash can into a recycling bin with a sticker from 311. The bin should be smaller than 32 gallons, and needs to have a lid.</li>
+
+            </ul>
+
+            <p class="text-center">
+              <a href="#" class="btn btn-outline-secondary btn-lg">Lorem Ipsum Dolor</a>
+            </p>
+
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row align-items-center">
+          <div class="col-md-5">
+            <img src="https://picsum.photos/seed/2/800" class="img-fluid d-block mx-auto v-card mb-3">
+          </div>
+
+          <div class="col-md-7">
+            <p class="display-4 text-primary">Lorem ipsum dolor sit amet quia et suscipit</p>
+            <ul>
+
+              <li>Place trash in a container with a lid or use a sturdy trash bag.</li>
+              <li>Place recycling on the curb in a City-issued, recycling cart. Contact BOS:311 to request a new recycling cart, but keep in mind they are not available until March. </li>
+              <li>Do not use small plastic and paper bags from market or convenience stores for trash or recycling on your curb. </li>
+              <li>You can turn a trash can into a recycling bin with a sticker from 311. The bin should be smaller than 32 gallons, and needs to have a lid.</li>
+
+            </ul>
+
+            <p class="text-center">
+              <a href="#" class="btn btn-outline-secondary btn-lg">Lorem Ipsum Dolor</a>
+            </p>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row">
+          <div class="col-12">
+            <p class="h4">Heading</p>
+
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="h4">Another Heading</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="text-center">
+              <a href="#" class="btn btn-outline-secondary btn-lg">Lorem Ipsum Dolor</a>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="trending" class="py-5 bg-dark">
+      <div class="container">
+
+        <h2 class="mt-0 text-left text-warning font-weight-bold display-4" >
+          Trending
+        </h2>
+
+        <hr class="bg-warning mt-0 mb-5 pt-1">
+
+        <ol class="d-flex flex-wrap text-warning">
+          <li class="col-md-6 mb-4 px-4" v-for="post in trending">
+            <a href="#" class="h5 text-white text-capitalize">
+              {{ post.title }}
+            </a>
+            <small class="text-muted d-block">2 hours ago</small>
+          </li>
+        </ol>
 
       </div>
     </section>
@@ -109,9 +222,16 @@ import QuickLinks from '../partials/QuickLinks'
 import EventCards from '../partials/EventCards'
 
 export default {
+  data: () => ({
+    trending: []
+  }),
   mounted () {
     this.$parent.jumbo = false
+    this.$parent.showFeedbackForm = true
     this.$parent.pageTitle = 'Trash & Recycling'
+    fetch('https://jsonplaceholder.typicode.com/posts?_limit=6').then(res => res.json()).then(data => {
+      this.trending = data
+    })
   },
   components: {
     QuickLinks,

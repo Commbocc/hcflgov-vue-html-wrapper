@@ -56,7 +56,7 @@
     </div>
 
     <!-- footer -->
-    <footer is="hc-footer" class="mt-auto"></footer>
+    <footer is="hc-footer" class="mt-auto" :show-feedback-form="showFeedbackForm"></footer>
 
     <!-- demo options -->
     <aside class="fixed-bottom" aria-label="Demo Options">
@@ -87,7 +87,8 @@ export default {
     jumboGradient: 'primary',
     jumboAlt: true,
     pageTitle: null,
-    swapNews: false
+    swapNews: false,
+    showFeedbackForm: true
   }),
   computed: {
     views () {

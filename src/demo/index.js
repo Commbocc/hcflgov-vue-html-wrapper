@@ -1,4 +1,4 @@
-// export { default as Guide } from './Guide'
+export { default as Guide } from './Guide'
 export { default as Home } from './Home'
 export { default as Newsroom } from './Newsroom'
 export { default as NewsArticle } from './NewsArticle'
