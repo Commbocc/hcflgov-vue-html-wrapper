@@ -30,10 +30,14 @@
 
 <script>
 export default {
+  name: 'hc-pagination',
   props: {
+    /**
+    * The paging object
+    */
     paging: {
       type: Object,
-      default: () => null
+      required: true
     }
   },
   methods: {

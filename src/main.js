@@ -15,6 +15,10 @@ Vue.config.productionTip = false
 
 Vue.use(HcHtmlWrapper)
 
+// Vue.prototype.$demo = new Vue({
+//   extends: Demo
+// }).$mount('#hc-main')
+
 new Vue({
   render: h => h(Demo)
 }).$mount('#hc-main')

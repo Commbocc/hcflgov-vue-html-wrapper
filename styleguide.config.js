@@ -7,9 +7,11 @@ module.exports = {
   usageMode: 'expand',
   styleguideDir: 'docs',
   ignore: [
-    '**/components/Navbar/SearchForm.vue',
     '**/components/Cards/*.vue',
     '**/components/IconButton.vue',
+    '**/components/Navbar/SearchForm.vue',
+    '**/components/Navbar/Dropdown.vue',
+    '**/components/Search/Filters.vue',
     '**/components/Search/Result.vue'
   ]
   // sections: [

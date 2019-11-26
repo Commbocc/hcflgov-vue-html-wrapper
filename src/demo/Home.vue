@@ -141,6 +141,7 @@ import QuickLinks from '../partials/QuickLinks'
 export default {
   mounted () {
     this.$parent.jumbo = true
+    this.$parent.showFeedbackForm = false
     this.$parent.pageTitle = 'Hillsborough County'
   },
   computed: {

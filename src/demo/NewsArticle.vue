@@ -99,6 +99,7 @@ export default {
   mounted () {
     this.$parent.jumbo = false
     this.$parent.pageTitle = this.heading
+    this.$parent.showFeedbackForm = true
     this.relatedArticles = posts.slice(0,4)
   }
 }

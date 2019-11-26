@@ -82,8 +82,6 @@
 
             </div>
 
-
-
           </div>
 
           <div class="col-lg-8">
@@ -91,9 +89,7 @@
             <!-- filtered info -->
             <div class="text-muted small text-right">
               <em>
-                showing <strong>25</strong> of <strong>272</strong> results
-
-
+                showing <strong>{{ pagination.per_page }}</strong> of <strong>{{ pagination.count }}</strong> results
               </em>
 
               <div v-if="false">
@@ -118,7 +114,7 @@
         </div>
 
         <!-- pagination -->
-        <div is="HcPagination" :paging="pagination"></div>
+        <div is="HcPagination" ref="pagination" :paging="pagination"></div>
 
       </div>
     </section>
@@ -168,11 +164,12 @@ import posts from './posts'
 export default {
   data: () => ({
     posts: [],
-    pagination:  {"current": 2,"previous": 1,"next": 3,"per_page": 15,"pages": 18,"count": 261}
+    pagination:  {"current": 2,"previous": 1,"next": 3,"per_page": 25,"pages": 18,"count": 261}
   }),
   mounted () {
     this.posts = posts
     this.$parent.jumbo = false
+    this.$parent.showFeedbackForm = false
     this.$parent.pageTitle = 'Newsroom'
   }
 }

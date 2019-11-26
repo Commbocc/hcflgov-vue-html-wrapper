@@ -45,6 +45,7 @@ export default {
   },
   mounted () {
     this.$parent.jumbo = false
+    this.$parent.showFeedbackForm = true
     this.$parent.pageTitle = 'Adopt a Dog or Cat'
   }
 }

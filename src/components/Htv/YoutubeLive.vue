@@ -1,8 +1,8 @@
 <template lang="html">
-  <section v-if="isLive" class="py-3" aria-label="HTV Live">
+  <section v-if="isLive" class="bg-light gradient-diag-dark py-sm-5" aria-label="HTV Live">
 
-    <div class="container embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" :src="emebdUrl" allowfullscreen></iframe>
+    <div class="container embed-responsive embed-responsive-16by9 my-sm-3">
+      <iframe class="embed-responsive-item" :src="emebdUrl" allowfullscreen playsinline="1"></iframe>
     </div>
 
   </section>
