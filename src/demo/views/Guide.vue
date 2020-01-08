@@ -74,7 +74,7 @@
         <hr class="bg-dark mt-0 pt-1">
 
         <div class="row">
-          <div v-for="n in 4" class="col-md-6">
+          <div v-for="n in 4" :key="n" class="col-md-6">
             <a href="#" class="p-3 list-group-item-action media border border-right-0 border-left-0">
               <div class="media-body">
                 <h6 class="mt-0 mb-1 text-secondary text-capitalize">
@@ -202,7 +202,7 @@
         <hr class="bg-warning mt-0 mb-5 pt-1">
 
         <ol class="d-flex flex-wrap text-warning">
-          <li class="col-md-6 mb-4 px-4" v-for="post in trending">
+          <li class="col-md-6 mb-4 px-4" v-for="(post, i) in trending" :key="i">
             <a href="#" class="h5 text-white text-capitalize">
               {{ post.title }}
             </a>
@@ -221,7 +221,7 @@
 import { mapMutations, mapActions } from 'vuex'
 
 import QuickLinks from '@/partials/QuickLinks'
-import EventCards from '@/partials/EventCards'
+// import EventCards from '@/partials/EventCards'
 
 export default {
   mounted() {
@@ -231,7 +231,10 @@ export default {
     this.setTrendingPosts()
   },
 
-  components: { QuickLinks, EventCards },
+  components: {
+    QuickLinks
+    // EventCards
+  },
 
   methods: {
     ...mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner']),

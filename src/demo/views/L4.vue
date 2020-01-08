@@ -14,7 +14,7 @@
 
           <div class="card card-body bg-light mb-3">
             <ul class="small m-0">
-              <li v-for="n in 4">
+              <li v-for="n in 4" :key="n">
                 <a href="#">Document {{ n }}</a>
               </li>
             </ul>
@@ -37,7 +37,7 @@
 <script>
 import { mapMutations } from 'vuex'
 
-import L4Adopt from './L4/Adopt'
+// import L4Adopt from './L4/Adopt'
 import L4InspectionCodes from './L4/InspectionCodes'
 
 export default {
@@ -49,7 +49,7 @@ export default {
   },
 
   components: {
-    L4Adopt,
+    // L4Adopt,
     L4InspectionCodes
   },
   

@@ -4,14 +4,14 @@
 
       <form class="form-inline mr-auto my-2 my-lg-0">
         <div class="mr-2">
-          <select :value="$route.name" @change="$router.push({ name: $event.target.value })" class="form-control">
-            <option v-for="view in routes" :value="view.name">{{ view.name }}</option>
+          <select :value="$route.path" @change="$router.push($event.target.value)" class="form-control">
+            <option v-for="(view) in routes" :key="view.name" :value="view.path">{{ view.name }}</option>
           </select>
         </div>
 
         <div class="mr-2">
           <select :value="bannerGradient" @change="setBannerGradient" class="form-control">
-            <option v-for="color in ['primary', 'secondary', 'info', 'success', 'warning', 'danger', 'light', 'dark']" :value="color">{{ color }}</option>
+            <option v-for="color in ['primary', 'secondary', 'info', 'success', 'warning', 'danger', 'light', 'dark']" :key="color" :value="color">{{ color }}</option>
           </select>
         </div>
 
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import { routes } from '../router'
 
 export default {

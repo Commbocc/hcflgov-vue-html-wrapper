@@ -7,7 +7,7 @@ import router from './demo/router'
 import store from './demo/store'
 
 // vendor
-// import $ from 'jquery'
+import $ from 'jquery'
 import 'popper.js'
 import 'bootstrap'
 

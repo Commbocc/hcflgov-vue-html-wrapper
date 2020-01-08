@@ -1,7 +1,7 @@
 <template lang="html">
-  <main aria-labelledby="home-h1" class="d-flex flex-column">
+  <main aria-labelledby="home-h1">
 
-        <!-- header -->
+    <!-- header -->
     <header v-if="true">
       <div is="hc-parallax" :gradient="bannerGradient" class="text-center text-shadow">
         <div v-if="jumboAlt" class="">
@@ -38,7 +38,9 @@
       </div>
     </section>
 
-    <!--  -->
+    <div class="d-flex flex-column">
+
+       <!--  -->
     <section v-if="true" :class="swapNews ? 'order-4' : 'order-2'" class="bg-white py-5" aria-labelledby="dynamicallyGeneratedSectionId2">
       <div class="container">
 
@@ -49,7 +51,7 @@
         <hr class="bg-dark mt-0 pt-1">
 
         <div class="row align-items-stretch justify-content-around">
-          <div v-for="(link, i) in featuredLinks" class="col-md-6 col-lg-4 mb-4">
+          <div v-for="(link, i) in featuredLinks" :key="i" class="col-md-6 col-lg-4 mb-4">
             <a is="hc-icon-btn" href="#" :icon="link.icon" stretch>
               {{ link.name }}
             </a>
@@ -81,13 +83,13 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <div class="mb-3">
+            <div class="mb-3 sticky">
               <div is="HcCardNews" :sitecore-item="posts[0]" class=""></div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="list-group">
-              <a v-for="(item, i) in newsCards" href="#" class="p-3 list-group-item-action media border border-right-0 border-left-0">
+              <a v-for="(item, i) in newsCards" :key="i" href="#" class="p-3 list-group-item-action media border border-right-0 border-left-0">
                 <div class="media-body">
                   <h6 class="mt-0 mb-1 text-secondary text-capitalize">
                     {{ item.Heading }}
@@ -105,7 +107,7 @@
         </div>
 
         <div v-if="false" class="row align-items-stretch">
-          <div v-for="(item, i) in newsCards" class="col-md-6 col-lg-4 mb-3">
+          <div v-for="(item, i) in newsCards" :key="i" class="col-md-6 col-lg-4 mb-3">
             <div is="HcCardNews" :sitecore-item="item" :hide-img="(i == 1 || i == 5)" class="v-card"></div>
           </div>
         </div>
@@ -122,8 +124,10 @@
       </div>
     </section>
 
+    </div>
+
     <!--  -->
-    <section v-if="true" class="bg-light py-5 order-12">
+    <section v-if="true" class="bg-light py-5">
       <div class="container">
 
         <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
@@ -134,7 +138,7 @@
 
         <!-- commissioners -->
         <div class="row align-items-top justify-content-around">
-          <div v-for="commissioner in commissioners" class="col-6 col-sm-4 col-md-3 col-lg mt-2">
+          <div v-for="(commissioner, i) in commissioners" :key="i" class="col-6 col-sm-4 col-md-3 col-lg mt-2">
             <a href="#" :title="commissioner.name" class="text-dark text-decoration-none">
               <div class="embed-responsive embed-responsive-1by1 rounded-circle v-card" :style="`background-image: url(${commissioner.imgSrc}); background-size: cover;`"></div>
               <div class="text-center small mt-1">

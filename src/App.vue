@@ -35,4 +35,5 @@ if (inBrowser && window.Vue) {
 }
 </script>
 
-<style src="./assets/sass/main.scss" lang="scss"></style>
+<style src="@/assets/sass/main.scss" lang="scss"></style>
+

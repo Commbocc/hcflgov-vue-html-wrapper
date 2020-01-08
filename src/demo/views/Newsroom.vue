@@ -17,7 +17,7 @@
         <hr class="bg-dark mt-0 pt-1">
 
         <div class="row align-items-stretch justify-content-center">
-          <div v-for="(post, i) in posts.slice(0,3)" class="col-md-6 col-lg-4 mb-4">
+          <div v-for="(post, i) in posts.slice(0,3)" :key="i" class="col-md-6 col-lg-4 mb-4">
             <div is="hc-card-news" :sitecore-item="post" :key="i" :date="new Date" class="v-card"></div>
           </div>
         </div>
@@ -95,7 +95,7 @@
               <div v-if="false">
                 containing
 
-                <span v-for="n in 2" class="badge badge-info text-white ml-1">
+                <span v-for="n in 2" :key="n" class="badge badge-info text-white ml-1">
                   filter {{ n }}
                   <a href="#" class="pl-1 text-secondary">&times;</a>
                 </span>

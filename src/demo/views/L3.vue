@@ -68,7 +68,7 @@
           <!--  -->
           <div class="list-group">
 
-            <a v-for="n in 25" class="list-group-item list-group-item-action rounded-0 mb-4" href="#">
+            <a v-for="n in 25" :key="n" class="list-group-item list-group-item-action rounded-0 mb-4" href="#">
               <div class="row align-items-center">
                 <div class="col-3 col-md-2 col-xl-1">
                   <div class="d-flex flex-column text-primary py-3">
