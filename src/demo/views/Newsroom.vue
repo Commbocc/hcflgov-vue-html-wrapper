@@ -159,18 +159,31 @@
 </template>
 
 <script>
-import posts from './posts'
+// import posts from './posts'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
+  mounted() {
+    this.showBanner()
+    this.setPageTitle('Newsroom')
+    this.showFeedbackForm(false)
+  },
+
   data: () => ({
-    posts: [],
-    pagination:  {"current": 2,"previous": 1,"next": 3,"per_page": 25,"pages": 18,"count": 261}
+    pagination: {
+      current: 2,
+      previous: 1,
+      next: 3,
+      per_page: 25,
+      pages: 18,
+      count: 261
+    }
   }),
-  mounted () {
-    this.posts = posts
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = false
-    this.$parent.pageTitle = 'Newsroom'
+
+  methods: mapMutations(['setPageTitle', 'showBanner', 'showFeedbackForm']),
+
+  computed: {
+    ...mapGetters(['posts'])
   }
 }
 </script>

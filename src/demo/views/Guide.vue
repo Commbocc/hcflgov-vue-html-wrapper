@@ -218,24 +218,33 @@
 </template>
 
 <script>
-import QuickLinks from '../partials/QuickLinks'
-import EventCards from '../partials/EventCards'
+import { mapMutations, mapActions } from 'vuex'
+
+import QuickLinks from '@/partials/QuickLinks'
+import EventCards from '@/partials/EventCards'
 
 export default {
+  mounted() {
+    this.showBanner()
+    this.setPageTitle('Trash & Recycling')
+    this.showFeedbackForm(true)
+    this.setTrendingPosts()
+  },
+
+  components: { QuickLinks, EventCards },
+
+  methods: {
+    ...mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner']),
+    ...mapActions(['fetchPosts']),
+    async setTrendingPosts() {
+      this.trending = await this.fetchPosts(
+        'https://jsonplaceholder.typicode.com/posts?_limit=6'
+      )
+    }
+  },
+
   data: () => ({
     trending: []
-  }),
-  mounted () {
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = true
-    this.$parent.pageTitle = 'Trash & Recycling'
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=6').then(res => res.json()).then(data => {
-      this.trending = data
-    })
-  },
-  components: {
-    QuickLinks,
-    EventCards
-  }
+  })
 }
 </script>

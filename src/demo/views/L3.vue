@@ -157,11 +157,18 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
+
 export default {
+
   mounted () {
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = true
-    this.$parent.pageTitle = 'Permits'
-  }
+    this.showBanner()
+    this.setPageTitle('Permits')
+    this.showFeedbackForm(true)
+  },
+
+  methods: mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner'])
+  
 }
 </script>

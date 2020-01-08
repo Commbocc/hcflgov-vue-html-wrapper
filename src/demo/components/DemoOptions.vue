@@ -4,20 +4,20 @@
 
       <form class="form-inline mr-auto my-2 my-lg-0">
         <div class="mr-2">
-          <select v-model="$parent.selected" class="form-control">
-            <option v-for="view in $parent.views" :value="view">{{ view }}</option>
+          <select :value="$route.name" @change="$router.push({ name: $event.target.value })" class="form-control">
+            <option v-for="view in routes" :value="view.name">{{ view.name }}</option>
           </select>
         </div>
 
         <div class="mr-2">
-          <select v-model="$parent.jumboGradient" class="form-control">
+          <select :value="bannerGradient" @change="setBannerGradient" class="form-control">
             <option v-for="color in ['primary', 'secondary', 'info', 'success', 'warning', 'danger', 'light', 'dark']" :value="color">{{ color }}</option>
           </select>
         </div>
 
-        <div v-if="$parent.selected == 'Home'" class="">
-          <button type="button" @click="$parent.jumboAlt = !$parent.jumboAlt" class="btn btn-sm btn-light">Change jumbo text</button>
-          <button type="button" @click="$parent.swapNews = !$parent.swapNews" class="btn btn-sm btn-light">Swap News &amp; Featured</button>
+        <div v-if="$route.name == 'Home'" class="">
+          <button type="button" @click="swapJumboStyle" class="btn btn-sm btn-light">Change jumbo style</button>
+          <button type="button" @click="swapNews" class="btn btn-sm btn-light">Swap News &amp; Featured</button>
         </div>
 
       </form>
@@ -45,6 +45,19 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapMutations } from 'vuex'
+import { routes } from '../router'
+
 export default {
+
+  data: () => ({
+    routes
+  }),
+    
+  methods: mapMutations(['setBanner', 'setBannerGradient', 'swapJumboStyle', 'swapNews']),
+
+  computed: {
+    ...mapState(['bannerGradient'])
+  }
 }
 </script>

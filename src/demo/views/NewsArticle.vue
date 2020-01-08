@@ -82,25 +82,34 @@
 </template>
 
 <script>
-import SitecoreContentItemMixin from '../mixins/Sitecore/ContentItem'
-import posts from './posts'
+import { mapGetters, mapMutations } from 'vuex'
+import SitecoreContentItemMixin from '@/mixins/Sitecore/ContentItem'
+import posts from '../store/data/posts'
 
 export default {
   mixins: [SitecoreContentItemMixin],
+
   props: {
     sitecoreItem: {
-      type: Object,
       default: () => posts[0]
     }
   },
+
+  mounted() {
+    this.showBanner()
+    this.setPageTitle(this.heading)
+    this.showFeedbackForm()
+    this.relatedArticles = this.posts.slice(0, 4)
+  },
+
   data: () => ({
     relatedArticles: []
   }),
-  mounted () {
-    this.$parent.jumbo = false
-    this.$parent.pageTitle = this.heading
-    this.$parent.showFeedbackForm = true
-    this.relatedArticles = posts.slice(0,4)
+
+  methods: mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner']),
+
+  computed: {
+    ...mapGetters(['posts'])
   }
 }
 </script>

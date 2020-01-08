@@ -1,7 +1,10 @@
 // demo
 import Vue from 'vue'
 import HcHtmlWrapper from './App'
-import Demo from './demo/_Layout'
+import Demo from './demo/App'
+
+import router from './demo/router'
+import store from './demo/store'
 
 // vendor
 // import $ from 'jquery'
@@ -15,10 +18,8 @@ Vue.config.productionTip = false
 
 Vue.use(HcHtmlWrapper)
 
-// Vue.prototype.$demo = new Vue({
-//   extends: Demo
-// }).$mount('#hc-main')
-
 new Vue({
-  render: h => h(Demo)
+  render: h => h(Demo),
+  router,
+  store,
 }).$mount('#hc-main')

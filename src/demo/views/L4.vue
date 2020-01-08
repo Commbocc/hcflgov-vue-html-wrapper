@@ -35,18 +35,24 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 import L4Adopt from './L4/Adopt'
 import L4InspectionCodes from './L4/InspectionCodes'
 
 export default {
+
+  mounted() {
+    this.showBanner()
+    this.setPageTitle('Adopt a Dog or Cat')
+    this.showFeedbackForm(true)
+  },
+
   components: {
     L4Adopt,
     L4InspectionCodes
   },
-  mounted () {
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = true
-    this.$parent.pageTitle = 'Adopt a Dog or Cat'
-  }
+  
+  methods: mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner'])
 }
 </script>
