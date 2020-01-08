@@ -22,6 +22,11 @@ export const routes = [
     component: () => import('../views/NewsArticle.vue')
   },
   {
+    path: '/l2',
+    name: 'Level 2 - Category',
+    component: () => import('../views/L2.vue')
+  },
+  {
     path: '/l3',
     name: 'Level 3',
     component: () => import('../views/L3.vue')
