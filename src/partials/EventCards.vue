@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="row">
 
-    <div v-for="n in 4" class="col-md-6">
+    <div v-for="n in 4" :key="n" class="col-md-6">
 
       <div class="card card-body mt-4">
         <div class="row justify-content-center">

@@ -65,12 +65,12 @@
 
           </div>
 
-          <!--  -->
-          <div class="list-group">
+          <!-- actions -->
+          <div class="">
 
-            <a v-for="n in 25" class="list-group-item list-group-item-action rounded-0 mb-4" href="#">
+            <a v-for="n in 25" :key="n" class="card card-body list-group-item-action mb-4" href="#">
               <div class="row align-items-center">
-                <div class="col-3 col-md-2 col-xl-1">
+                <div class="col-2 col-md-2 col-xl-1">
                   <div class="d-flex flex-column text-primary py-3">
                     <span class="fa fa-fw fa-clipboard fa-2x mx-auto">
                     </span> <small class="mx-auto">Apply</small>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-9 col-md-10 col-xl-11">
                   <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">Building Permit</h5>
+                    <h5 class="mb-1">Action Child (L4A) of Permits' L3</h5>
                     <small class="text-muted">General Building</small>
                   </div>
                   <div>
@@ -97,53 +97,9 @@
           <div class="sticky">
             <h4 class="text-muted font-weight-bold">Related Information</h4>
             <ul class="nav flex-column small">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Approved Hedge List</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Approved Tree List</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Building Inspection Codes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Grand Oak Regulations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Habitat Preservation Area Management Plan Proposal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Invasive Plant Removal, Disposal and Maintenance Plan</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Invasive Plants in Hillsborough County</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Land Excavation Permits</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Open Burning Restrictions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Permits for Homeowners</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Rezoning, Plans and Permit Information (PGM) Store</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Protective Barrier Requirements for Existing Trees</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Suggested Tree Replacement Species</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Trees that don't Require a Tree Removal Permit</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">What Permits are Available to Pull Online?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Work Exempt from Permits</a>
+              <li v-for="(l4, i) in l4s" :key="i" class="nav-item">
+                <!-- <a class="nav-link" href="#"></a> -->
+                <router-link :to="{ name: 'Level 4' }" class="nav-link">{{ l4 }}</router-link>
               </li>
             </ul>
           </div>
@@ -157,11 +113,35 @@
 </template>
 
 <script>
+import storeMixin from '@/demo/store/mixins'
+
 export default {
-  mounted () {
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = true
-    this.$parent.pageTitle = 'Permits'
-  }
+  mixins: [storeMixin],
+
+  mounted() {
+    this.setPageTitle('Permits')
+  },
+
+  data: () => ({
+    l4s: [
+      "Child (L4) of Permits' L3",
+      'Approved Hedge List',
+      'Approved Tree List',
+      'Building Inspection Codes',
+      'Grand Oak Regulations',
+      'Habitat Preservation Area Management Plan Proposal',
+      'Invasive Plant Removal, Disposal and Maintenance Plan',
+      'Invasive Plants in Hillsborough County',
+      'Land Excavation Permits',
+      'Open Burning Restrictions',
+      'Permits for Homeowners',
+      'Rezoning, Plans and Permit Information (PGM) Store',
+      'Protective Barrier Requirements for Existing Trees',
+      'Suggested Tree Replacement Species',
+      "Trees that don't Require a Tree Removal Permit",
+      'What Permits are Available to Pull Online?',
+      'Work Exempt from Permits'
+    ]
+  })
 }
 </script>

@@ -47,8 +47,8 @@ export default {
   mixins: [SitecoreContentItemMixin],
   props: {
     /**
-    *
-    */
+     *
+     */
     suggested: {
       type: Boolean,
       default: false
@@ -56,16 +56,16 @@ export default {
   },
   data: () => ({}),
   computed: {
-    suggestedBorderClass () {
-      return (this.suggested) ? 'border border-info' : null
+    suggestedBorderClass() {
+      return this.suggested ? 'border border-info' : null
     },
-    borderClass () {
+    borderClass() {
       let klasses = ['primary', 'info', 'warning', 'success']
       var klass = klasses[Math.floor(Math.random() * klasses.length)]
       return `border-${klass}`
     },
-    hasImg () {
-      return (this.imgSrc) ? true : false
+    hasImg() {
+      return this.imgSrc ? true : false
     }
   }
 }

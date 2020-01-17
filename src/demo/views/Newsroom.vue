@@ -17,7 +17,7 @@
         <hr class="bg-dark mt-0 pt-1">
 
         <div class="row align-items-stretch justify-content-center">
-          <div v-for="(post, i) in posts.slice(0,3)" class="col-md-6 col-lg-4 mb-4">
+          <div v-for="(post, i) in articles.slice(0,3)" :key="i" class="col-md-6 col-lg-4 mb-4">
             <div is="hc-card-news" :sitecore-item="post" :key="i" :date="new Date" class="v-card"></div>
           </div>
         </div>
@@ -95,7 +95,7 @@
               <div v-if="false">
                 containing
 
-                <span v-for="n in 2" class="badge badge-info text-white ml-1">
+                <span v-for="n in 2" :key="n" class="badge badge-info text-white ml-1">
                   filter {{ n }}
                   <a href="#" class="pl-1 text-secondary">&times;</a>
                 </span>
@@ -105,8 +105,8 @@
             </div>
 
             <div class="">
-              <!-- posts -->
-              <div is="hc-search-result" v-for="(post, i) in posts" :key="i" :sitecore-item="post" :date="new Date" class="mb-3" :suggested="i == 0"></div>
+              <!-- articles -->
+              <div is="hc-search-result" v-for="(post, i) in articles" :key="i" :sitecore-item="post" :date="new Date" class="mb-3" :suggested="i == 0"></div>
             </div>
 
           </div>
@@ -148,7 +148,7 @@
           </div>
           <div class="col-md-6">
             <nav class="nav flex-column">
-              <a v-for="(post, i) in posts.slice(0,8)" :key="i" href="#" class="nav-link">{{ post.Heading }}</a>
+              <a v-for="(post, i) in articles.slice(0,8)" :key="i" href="#" class="nav-link">{{ post.Heading }}</a>
             </nav>
           </div>
         </div>
@@ -159,18 +159,31 @@
 </template>
 
 <script>
-import posts from './posts'
+import storeMixin from '@/demo/store/mixins'
+import { mapState } from 'vuex'
 
 export default {
+  mixins: [storeMixin],
+
+  mounted() {
+    this.setPageTitle('Newsroom')
+    this.showFeedbackForm(false)
+    this.fetchArticles()
+  },
+
   data: () => ({
-    posts: [],
-    pagination:  {"current": 2,"previous": 1,"next": 3,"per_page": 25,"pages": 18,"count": 261}
+    pagination: {
+      current: 2,
+      previous: 1,
+      next: 3,
+      per_page: 25,
+      pages: 18,
+      count: 261
+    }
   }),
-  mounted () {
-    this.posts = posts
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = false
-    this.$parent.pageTitle = 'Newsroom'
-  }
+
+  computed: mapState({
+    articles: state => state.data.articles
+  })
 }
 </script>

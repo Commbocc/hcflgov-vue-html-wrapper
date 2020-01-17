@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="row no-gutters align-items-stretch justify-content-center">
-    <div v-for="(link, i) in qLinks" class="col-sm-6 col-lg-4 col-xl p-1">
+    <div v-for="(link, i) in qLinks" :key="i" class="col-sm-6 col-lg-4 col-xl p-1">
       <a href="#" class="card v-card card-body list-group-item-action text-center d-flex flex-column h-100">
 
         <div class="mb-3">
@@ -17,9 +17,13 @@
           </em>
         </div>
 
-        <div v-if="i == 0 || i == 3" class="badge badge-primary text-white rounded px-2 position-absolute" style="right: 1rem;">
-          <span class="fas fa-exclamation"></span>
+        <div v-if="i == 0 || i == 3" class="spinner-grow text-warning position-absolute mr-auto" role="status" style="right: 1rem;">
+          <span class="sr-only">Notice...</span>
         </div>
+
+        <!-- <div v-if="i == 0 || i == 3" class="badge badge-primary text-white rounded px-2 position-absolute" style="right: 1rem;">
+          <span class="fas fa-exclamation"></span>
+        </div> -->
       </a>
     </div>
   </div>
@@ -34,7 +38,7 @@ export default {
       { name: 'Events', icon: 'far fa-calendar-alt' },
       { name: 'County Locations', icon: 'far fa-building' },
       { name: 'Jobs', icon: 'fas fa-briefcase' }
-    ],
+    ]
   })
 }
 </script>

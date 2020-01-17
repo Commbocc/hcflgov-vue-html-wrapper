@@ -10,7 +10,7 @@
         <a class="page-link m-1" :href="`/#/?page=${paging.previous}`" title="Previous">&#8249;</a>
       </li>
 
-      <li v-for="page in paging.pages" :key="page" v-if="inRange(page)" class="page-item" :class="(page == paging.current) ? `disabled` : null">
+      <li v-for="page in paging.pages" :key="page" v-show="inRange(page)" class="page-item" :class="(page == paging.current) ? `disabled` : null">
         <a class="page-link m-1" :href="`/#/?page=${page}`">{{ page }}</a>
       </li>
 

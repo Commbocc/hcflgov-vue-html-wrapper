@@ -14,7 +14,7 @@
 
           <div class="card card-body bg-light mb-3">
             <ul class="small m-0">
-              <li v-for="n in 4">
+              <li v-for="n in 4" :key="n">
                 <a href="#">Document {{ n }}</a>
               </li>
             </ul>
@@ -25,7 +25,7 @@
             An Accompanying Document
           </a>
 
-          <a href="#" is="hc-icon-btn" icon="fas fa-paw">Pet Resource Center</a>
+          <a href="#" is="hc-icon-btn" icon="fas fa-tools">Development Services</a>
 
         </div>
       </div>
@@ -35,18 +35,21 @@
 </template>
 
 <script>
-import L4Adopt from './L4/Adopt'
+import storeMixin from '@/demo/store/mixins'
+
+// import L4Adopt from './L4/Adopt'
 import L4InspectionCodes from './L4/InspectionCodes'
 
 export default {
-  components: {
-    L4Adopt,
-    L4InspectionCodes
+  mixins: [storeMixin],
+
+  mounted() {
+    this.setPageTitle('Residential Inspection Codes')
   },
-  mounted () {
-    this.$parent.jumbo = false
-    this.$parent.showFeedbackForm = true
-    this.$parent.pageTitle = 'Adopt a Dog or Cat'
+
+  components: {
+    // L4Adopt,
+    L4InspectionCodes
   }
 }
 </script>
