@@ -24,7 +24,7 @@
           <span class="text-muted small">Posted {{ publishDate.toLocaleString() }} in {{ category }}</span>
 
         </div>
-      </div>
+      </div>y
 
       <div v-if="hasImg" class="d-none d-sm-block col-sm-3">
         <div class="h-100 d-flex align-items-end justify-content-end text-right" :style="`background: url(${imgSrc}); background-size: cover; background-position: center center`">
@@ -47,8 +47,8 @@ export default {
   mixins: [SitecoreContentItemMixin],
   props: {
     /**
-    *
-    */
+     *
+     */
     suggested: {
       type: Boolean,
       default: false
@@ -56,16 +56,16 @@ export default {
   },
   data: () => ({}),
   computed: {
-    suggestedBorderClass () {
-      return (this.suggested) ? 'border border-info' : null
+    suggestedBorderClass() {
+      return this.suggested ? 'border border-info' : null
     },
-    borderClass () {
+    borderClass() {
       let klasses = ['primary', 'info', 'warning', 'success']
       var klass = klasses[Math.floor(Math.random() * klasses.length)]
       return `border-${klass}`
     },
-    hasImg () {
-      return (this.imgSrc) ? true : false
+    hasImg() {
+      return this.imgSrc ? true : false
     }
   }
 }

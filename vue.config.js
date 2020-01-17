@@ -16,5 +16,20 @@ module.exports = {
         jQuery: 'jquery'
       })
     ]
+  },
+  devServer: {
+    proxy: {
+      '^/apis/v1/events': {
+        target: 'https://www.hillsboroughcounty.org/Calendar/GetEvents?to=1580533200000&from=1577854800000',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/apis/v1/events': ''
+        }
+      },
+      // '^/foo': {
+      //   target: '<other_url>'
+      // }
+    }
   }
 }

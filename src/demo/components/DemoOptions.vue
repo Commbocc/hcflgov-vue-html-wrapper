@@ -10,7 +10,7 @@
         </div>
 
         <div class="mr-2">
-          <select :value="bannerGradient" @change="setBannerGradient" class="form-control">
+          <select :value="bannerGradient" @change="setBannerGradient($event.target.value)" class="form-control">
             <option v-for="color in ['primary', 'secondary', 'info', 'success', 'warning', 'danger', 'light', 'dark']" :key="color" :value="color">{{ color }}</option>
           </select>
         </div>
@@ -18,6 +18,10 @@
         <div v-if="$route.name == 'Home'" class="">
           <button type="button" @click="swapJumboStyle" class="btn btn-sm btn-light">Change jumbo style</button>
           <button type="button" @click="swapNews" class="btn btn-sm btn-light">Swap News &amp; Featured</button>
+        </div>
+
+        <div v-if="$route.name == 'News Article'" class="">
+          <button type="button" @click="toggleNewsArticleVideo" class="btn btn-sm btn-light">Toggle Video</button>
         </div>
 
       </form>
@@ -54,7 +58,7 @@ export default {
     routes
   }),
     
-  methods: mapMutations(['setBanner', 'setBannerGradient', 'swapJumboStyle', 'swapNews']),
+  methods: mapMutations(['setBanner', 'setBannerGradient', 'swapJumboStyle', 'swapNews', 'toggleNewsArticleVideo']),
 
   computed: {
     ...mapState(['bannerGradient'])

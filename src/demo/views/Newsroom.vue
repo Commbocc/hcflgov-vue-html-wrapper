@@ -17,7 +17,7 @@
         <hr class="bg-dark mt-0 pt-1">
 
         <div class="row align-items-stretch justify-content-center">
-          <div v-for="(post, i) in posts.slice(0,3)" :key="i" class="col-md-6 col-lg-4 mb-4">
+          <div v-for="(post, i) in articles.slice(0,3)" :key="i" class="col-md-6 col-lg-4 mb-4">
             <div is="hc-card-news" :sitecore-item="post" :key="i" :date="new Date" class="v-card"></div>
           </div>
         </div>
@@ -105,8 +105,8 @@
             </div>
 
             <div class="">
-              <!-- posts -->
-              <div is="hc-search-result" v-for="(post, i) in posts" :key="i" :sitecore-item="post" :date="new Date" class="mb-3" :suggested="i == 0"></div>
+              <!-- articles -->
+              <div is="hc-search-result" v-for="(post, i) in articles" :key="i" :sitecore-item="post" :date="new Date" class="mb-3" :suggested="i == 0"></div>
             </div>
 
           </div>
@@ -148,7 +148,7 @@
           </div>
           <div class="col-md-6">
             <nav class="nav flex-column">
-              <a v-for="(post, i) in posts.slice(0,8)" :key="i" href="#" class="nav-link">{{ post.Heading }}</a>
+              <a v-for="(post, i) in articles.slice(0,8)" :key="i" href="#" class="nav-link">{{ post.Heading }}</a>
             </nav>
           </div>
         </div>
@@ -159,14 +159,16 @@
 </template>
 
 <script>
-// import posts from './posts'
-import { mapGetters, mapMutations } from 'vuex'
+import storeMixin from '@/demo/store/mixins'
+import { mapState } from 'vuex'
 
 export default {
+  mixins: [storeMixin],
+
   mounted() {
-    this.showBanner()
     this.setPageTitle('Newsroom')
     this.showFeedbackForm(false)
+    this.fetchArticles()
   },
 
   data: () => ({
@@ -180,10 +182,8 @@ export default {
     }
   }),
 
-  methods: mapMutations(['setPageTitle', 'showBanner', 'showFeedbackForm']),
-
-  computed: {
-    ...mapGetters(['posts'])
-  }
+  computed: mapState({
+    articles: state => state.data.articles
+  })
 }
 </script>

@@ -35,7 +35,7 @@
           <slot v-if="customNav"></slot>
 
 
-          <li v-else v-for="link in navLinks" class="nav-item order-lg-1 dropdown">
+          <li v-else v-for="(link, i) in navLinks" :key="i" class="nav-item order-lg-1 dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ link.Name }}
             </a>

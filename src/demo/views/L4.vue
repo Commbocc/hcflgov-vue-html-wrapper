@@ -25,7 +25,7 @@
             An Accompanying Document
           </a>
 
-          <a href="#" is="hc-icon-btn" icon="fas fa-paw">Pet Resource Center</a>
+          <a href="#" is="hc-icon-btn" icon="fas fa-tools">Development Services</a>
 
         </div>
       </div>
@@ -35,24 +35,21 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import storeMixin from '@/demo/store/mixins'
 
 // import L4Adopt from './L4/Adopt'
 import L4InspectionCodes from './L4/InspectionCodes'
 
 export default {
+  mixins: [storeMixin],
 
   mounted() {
-    this.showBanner()
-    this.setPageTitle('Adopt a Dog or Cat')
-    this.showFeedbackForm(true)
+    this.setPageTitle('Residential Inspection Codes')
   },
 
   components: {
     // L4Adopt,
     L4InspectionCodes
-  },
-  
-  methods: mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner'])
+  }
 }
 </script>

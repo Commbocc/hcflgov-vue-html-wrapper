@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="WasThisPageHelpful" class="bg-white py-5 v-card" aria-describedby="WasThisPageHelpfulHeading">
+  <div id="WasThisPageHelpful" class="bg-light py-5 v-card" aria-describedby="WasThisPageHelpfulHeading">
     <div class="container">
       <form action="https://www.formstack.com/forms/index.php" target="_blank" method="post" enctype="multipart/form-data" class="text-center">
 

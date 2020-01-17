@@ -9,7 +9,7 @@
         <div class="row align-items-center text-center">
           <div class="col-lg-6 col-md-12 mb-4 order-md-2">
             <ul class="list-inline mb-0">
-              <li v-for="link in footerLinks" class="list-inline-item mx-3">
+              <li v-for="(link, i) in footerLinks" :key="i" class="list-inline-item mx-3">
                 <a :href="link.href" class="text-white" :target="linkTargets">
                   {{ link.text }}
                 </a>
@@ -25,7 +25,7 @@
 
           <div class="col-lg-3 col-md-6 mb-4 order-md-12">
             <ul class="list-inline my-2 hide-external-indicator">
-              <li v-for="link in socialLinks" class="list-inline-item">
+              <li v-for="(link, i) in socialLinks" :key="i" class="list-inline-item">
                 <a :href="link.href" :title="link.name" class="text-white" target="_blank" :aria-label="link.name">
                   <span class="fa-fw" :class="link.iconClass" aria-hidden="true"></span>
                 </a>
@@ -60,7 +60,7 @@
 import Links from '../../mixins/links'
 
 window.googleTranslateElementInit = function () {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar,de,en,es,fr,ht,pt,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element')
+  new window.google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar,de,en,es,fr,ht,pt,vi', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element')
 }
 
 export default {

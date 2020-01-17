@@ -3,7 +3,7 @@
 
     <div :class="(card) ? 'card-header pt-1' : 'mb-1'">
       <ul v-if="tabLinks.length" class="nav nav-tabs" :class="listClass" role="tablist">
-        <li v-for="(tab, i) in tabLinks" class="nav-item">
+        <li v-for="(tab, i) in tabLinks" :key="i" class="nav-item">
           <a :class="linkClass(i)" v-bind="linkAttrs(tab, i)">
             {{ tab.title }}
           </a>

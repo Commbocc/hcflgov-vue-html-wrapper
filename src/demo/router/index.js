@@ -41,6 +41,11 @@ export const routes = [
     name: 'Guide',
     component: () => import('../views/Guide.vue')
   },
+  {
+    path: '/commissioner',
+    name: 'Commissioner',
+    component: () => import('../views/Commissioner.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'about',
