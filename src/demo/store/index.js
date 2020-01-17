@@ -1,55 +1,50 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
+// import axios from 'axios'
 
 // modules
 import * as modules from './modules'
 
 // data
-import commissioners from './data/commissioners'
-import posts from './data/posts'
-import featuredLinks from './data/featured-links'
+import featuredLinks from './modules/data/featured-links'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
     modules,
     state: {
-        showDemoBar: false,
-        showAlert: false,
-        showBanner: true,
-        bannerGradient: 'primary',
+        demoBar: false,
         pageTitle: 'Hillsborough County',
-        showFeedbackForm: true
+        alert: false,
+        banner: true,
+        bannerImage: 'https://commbocc.github.io/hc-templates-jekyll/assets/images/JoeChilluraPark.jpg',
+        bannerGradient: 'primary',
+        feedbackForm: true
     },
     mutations: {
         toggleDemoBar(state) {
-            state.showDemoBar = !state.showDemoBar
+            state.demoBar = !state.demoBar
         },
         setPageTitle(state, data = 'Hillsborough County') {
+            document.title = data
             state.pageTitle = data
         },
         showBanner(state, data = true) {
-            state.showBanner = data
+            state.banner = data
         },
         showFeedbackForm(state, data = true) {
-            state.showFeedbackForm = data
+            state.feedbackForm = data
         },
-        setBannerGradient(state, event) {
-            state.bannerGradient = event.target.value
+        setBannerImage(state, data = 'https://commbocc.github.io/hc-templates-jekyll/assets/images/JoeChilluraPark.jpg') {
+            state.bannerImage = data
+        },
+        setBannerGradient(state, data = 'primary') {
+            state.bannerGradient = data
         },
     },
     getters: {
-        commissioners: () => commissioners,
-        posts: () => posts,
         featuredLinks: () => featuredLinks,
         gradients: () => ['primary', 'info', 'warning', 'danger', 'success']
-    },
-    actions: {
-        async fetchPosts (context, url) {
-            let { data } = await axios.get(url)
-            return data
-        }
     }
 })
 

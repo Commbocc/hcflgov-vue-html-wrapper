@@ -38,95 +38,40 @@
       </div>
     </section>
 
+    <!-- flex column for dynamic switching of the featured links & news sections -->
     <div class="d-flex flex-column">
 
-       <!--  -->
-    <section v-if="true" :class="swapNews ? 'order-4' : 'order-2'" class="bg-white py-5" aria-labelledby="dynamicallyGeneratedSectionId2">
-      <div class="container">
+      <!-- featured links -->
+      <section v-if="true" :class="swapNews ? 'order-4' : 'order-2'" class="bg-white py-5" aria-labelledby="dynamicallyGeneratedSectionId2">
+        <div class="container">
 
-        <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
-          Featured Links
-        </h2>
+          <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
+            Featured Links
+          </h2>
 
-        <hr class="bg-dark mt-0 pt-1">
+          <hr class="bg-dark mt-0 pt-1">
 
-        <div class="row align-items-stretch justify-content-around">
-          <div v-for="(link, i) in featuredLinks" :key="i" class="col-md-6 col-lg-4 mb-4">
-            <a is="hc-icon-btn" href="#" :icon="link.icon" stretch>
-              {{ link.name }}
-            </a>
-          </div>
+          <IconButtons :links="featuredLinks" />
+
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!--  -->
-    <section class="py-4 bg-dark order-3 gradient-diag-dark text-light">
-      <div class="container text-center">
-        <strong class="text-primary">
-          Some kind of an announcement, not too serious!
-        </strong>
-        <em class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</em>
-      </div>
-    </section>
-
-    <!--  -->
-    <section v-if="true" :class="swapNews ? 'order-2' : 'order-4'" class="bg-white py-5">
-      <div class="container">
-
-        <h2 class="text-left display text-dark font-weight-bold display-4" id="dynamicallyGeneratedSectionId2">
-          News &amp; Announcements
-        </h2>
-
-        <hr class="bg-dark mt-0 pt-1">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="mb-3 sticky">
-              <div is="HcCardNews" :sitecore-item="posts[0]" class=""></div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="list-group">
-              <a v-for="(item, i) in newsCards" :key="i" href="#" class="p-3 list-group-item-action media border border-right-0 border-left-0">
-                <div class="media-body">
-                  <h6 class="mt-0 mb-1 text-secondary text-capitalize">
-                    {{ item.Heading }}
-                  </h6>
-                  <div class="small font-italic">
-                    {{ item.SubHeading }}
-                  </div>
-                  <span>{{ item.Excerpt }}</span>
-                  <span class="d-block text-muted small">Posted {{ item.PublishDate.toLocaleString() }} in {{ item.Category }}</span>
-                 </div>
-                <span class="fa-2x text-info ml-3 align-self-center" :class="item.Icon"></span>
-              </a>
-            </div>
-          </div>
+      <!--  -->
+      <section class="py-4 bg-dark order-3 gradient-diag-dark text-light">
+        <div class="container text-center">
+          <strong class="text-primary">
+            Some kind of an announcement, not too serious!
+          </strong>
+          <em class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</em>
         </div>
+      </section>
 
-        <div v-if="false" class="row align-items-stretch">
-          <div v-for="(item, i) in newsCards" :key="i" class="col-md-6 col-lg-4 mb-3">
-            <div is="HcCardNews" :sitecore-item="item" :hide-img="(i == 1 || i == 5)" class="v-card"></div>
-          </div>
-        </div>
-
-        <p class="text-center my-3">
-          <!-- <a href="#" class="btn btn-lg btn-primary">
-            Visit the Newsroom
-          </a> -->
-          <router-link :to="{ name: 'Newsroom' }" class="btn btn-lg btn-primary">
-            Visit the Newsroom
-          </router-link>
-        </p>
-
-      </div>
-    </section>
+      <!-- News & Announcements -->
+      <HomeNewsAnnouncements :articles="articles" :class="swapNews ? 'order-2' : 'order-4'" />
 
     </div>
 
-    <!--  -->
+    <!-- commissioners -->
     <section v-if="true" class="bg-light py-5">
       <div class="container">
 
@@ -137,24 +82,15 @@
         <hr class="bg-dark mt-0 pt-1">
 
         <!-- commissioners -->
-        <div class="row align-items-top justify-content-around">
-          <div v-for="(commissioner, i) in commissioners" :key="i" class="col-6 col-sm-4 col-md-3 col-lg mt-2">
-            <a href="#" :title="commissioner.name" class="text-dark text-decoration-none">
-              <div class="embed-responsive embed-responsive-1by1 rounded-circle v-card" :style="`background-image: url(${commissioner.imgSrc}); background-size: cover;`"></div>
-              <div class="text-center small mt-1">
-                <strong class="h6 d-block mb-0">{{ commissioner.name }}</strong>
-                <span class="text-muted">
-                  {{ commissioner.title }}
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
+        <HcCommissionerCirlces :commissioners="commissioners" />
 
         <p class="text-center">
-          <a href="#" class="btn btn-lg btn-outline-secondary mt-3">
+          <!-- <a href="#" class="btn btn-lg btn-outline-secondary mt-3">
             Contact My Commissioner
-          </a>
+          </a> -->
+          <router-link :to="{ name: 'Commissioner' }" class="btn btn-lg btn-outline-secondary mt-3">
+            Contact My Commissioner
+          </router-link>
         </p>
 
       </div>
@@ -164,30 +100,32 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex'
+import storeMixin from '@/demo/store/mixins'
+import { mapState, mapGetters } from 'vuex'
+import IconButtons from '../../partials/IconButtons'
 import QuickLinks from '../../partials/QuickLinks'
+import HomeNewsAnnouncements from '../../partials/HomeNewsAnnouncements'
 
 export default {
+  mixins: [storeMixin],
+
   mounted() {
     this.showBanner(false)
-    this.setPageTitle()
     this.showFeedbackForm(false)
+    this.fetchArticles()
+    this.fetchCommissioners()
   },
 
-  components: { QuickLinks },
-
-  methods: mapMutations(['setPageTitle', 'showBanner', 'showFeedbackForm']),
+  components: { QuickLinks, IconButtons, HomeNewsAnnouncements },
 
   computed: {
-    ...mapState(['pageTitle', 'bannerGradient']),
     ...mapState({
       jumboAlt: state => state.home.jumboAlt,
-      swapNews: state => state.home.swapNews
+      swapNews: state => state.home.swapNews,
+      commissioners: state => state.data.commissioners,
+      articles: state => state.data.articles
     }),
-    ...mapGetters(['commissioners', 'posts', 'featuredLinks']),
-    newsCards() {
-      return this.posts.slice(1, 5)
-    }
+    ...mapGetters(['featuredLinks'])
   }
 }
 </script>

@@ -1,0 +1,125 @@
+export default [
+    {
+        name: 'Sandra Murman',
+        fName: 'Sandra',
+        lName: 'Murman',
+        title: 'District 1',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '(813) 272-5470',
+        fax: '(813) 272-7046',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=1',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/commissioners/murman-profile.jpg',
+        bannerImgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/commissioners/murmanpage2.jpg',
+        aides: ['Della Cury', 'Craig Jewesak'],
+        boards: [
+            'Career Source Tampa Bay',
+            'Children’s Board of Hillsborough County',
+            'Early Learning Coalition of Hillsborough County',
+            'Hillsborough County Emergency Policy Group - Alternate',
+            'Hospital Authority',
+            'Metropolitan Planning Organization (MPO) - Alternate',
+            'Port Authority',
+            'Public Safety Coordinating Council',
+            'Tampa Bay Water Board of Directors',
+            'Value Adjustment Board',
+        ],
+        body: `
+            <p>Sandra Murman was elected as a County Commissioner in 2010, representing District 1. She was re- elected without opposition in June 2012, and subsequently re - elected to her third term in November 2016. She was elected by her fellow commissioners as Chairman of the BOCC for 2017 - 18.</p >
+            <p>Commissioner Murman served Chairman of the BOCC for 2014-15, and as Vice Chairman in 2011, 2012, 2013 and 2016. Prior to joining the County Commission, she completed eight years as a member of the Florida House of Representatives from 1996-2004. Representative Murman was the first Republican Woman to hold the position of Speaker Pro-Tempore in the Florida House of Representatives. As a longtime resident of Hillsborough County, Commissioner Murman has spent many hours volunteering her time as a community advocate as well as a public policy leader. She has been directly involved in more than 30 organizations that support our community and enhance the lives of children and families. Her lifetime dream was to build a children’s museum in our community so she spearheaded the Capital Campaign to raise $16 million to build the new Glazer Children’s Museum in downtown Tampa. She also served as Chair of the Board of Directors for the Museum.</p>
+            <p>Commissioner Murman is currently focused on five major areas: (1) Economic Development and bringing jobs to Hillsborough County through her work as former Chairman of the Economic Prosperity Stakeholders Committee, former Chairman of Tourist Development Council (TDC), former member of the Tampa Hillsborough Economic Development Corporation (EDC) and serving on the board of CareerSource Tampa Bay. (2) Transportation Through Economic Development where she is working with all local leaders to craft future effective transportation policy, and she serves on the boards for the Hillsborough Area Regional Transit (HART) Authority, the Metropolitan Planning Organization (MPO), the Tampa Port Authority and as a former member of the Tampa Bay Area Regional Transportation Authority (TBARTA). (3) Ending Homelessness in Hillsborough County through her work as a founding board member of the Tampa Hillsborough Homeless Initiative (THHI), and the Steps Forward group that is implementing the Housing First model here. (4) Continued improvements to Customer Service and Communications between the county and its citizens. And (5) providing high-quality critical Children’s Services in Hillsborough County through her creation of a Blue Ribbon Committee for Child Safety, and serving on the Children’s Board of Hillsborough County, the Eckerd Friends of the Children board, the Florida KIDS COUNT USF Advisory Council, the Early Learning Coalition Board, the Starting Right, Now Board, the Healthy Start Coalition Board and the Family Healthcare Foundation Board.</p>
+            <p>Commissioner Murman also serves on the Board of Tampa Bay Water as Vice Chairman; as a member of the American Cancer Society Board of Directors, the Tampa Museum of Art Board of Directors, the Community Foundation of Tampa Bay’s LEAP Leadership Council, the Hillsborough Education Foundation’s School Enrichment Committee, the Hillsborough Community College (HCC) EMS Advisory Board, the DACCO Advisory Board, the USF College of Nursing Advisory Board, the Centre 4 Girls Advisory Council and many others.</p>
+            <p>Her hands on approach to helping others has earned her recognition and numerous awards for her unequaled support, such as the Lifetime Achievement Award from the Florida Developmental Disabilities Council, Lifelong Contribution Award from the Brandon Foundation, Achievement Award for the Advancement of Women from the Hillsborough Association of Women Lawyers, Community Impact Award from the YMCA, Children’s Advocacy Award from the Early Childhood Council, Bronze Leadership Award from Junior Achievement, Humanitarian Award from the St. John Progressive Missionary Baptist Church, Peter Bernal Award of Distinction from the Florida Association of Health Care Plans, Community Advocate for Education Award from the Hillsborough Education Foundation, Sun Coast Girl Scout Council Woman of Distinction Award, and many others.</p>
+            <p>Commissioner Murman is a native of Indiana and a graduate of Indiana University with a Bachelor of Arts degree in Marketing. She is married to local attorney Jim Murman of Barr, Murman, Tonelli, P.A. and they have a daughter, Michele, who graduated from Florida State University and is married to Dr. Michael Bradner. They live in Tampa and have two children.</p>
+        `
+    },
+    {
+        name: 'Ken Hagan',
+        fName: 'Ken',
+        lName: 'Hagan',
+        title: 'District 2',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '',
+        fax: '',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=2',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/commissioners/hagan-k-3.jpg',
+        bannerImgSrc: null,
+        aides: [],
+        boards: [],
+        body: null
+    },
+    {
+        name: 'Lesley "Les" Miller, Jr.',
+        fName: '',
+        lName: '',
+        title: 'District 3, Chairman',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '',
+        fax: '',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=3',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/commissioners/miller-l-2/les-miller.jpg',
+        bannerImgSrc: null,
+        aides: [],
+        boards: [],
+        body: null
+    },
+    {
+        name: 'Stacy White',
+        fName: '',
+        lName: '',
+        title: 'District 4, Chaplain',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '',
+        fax: '',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=4',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/commissioners/stacy-white-headshot.jpg',
+        bannerImgSrc: null,
+        aides: [],
+        boards: [],
+        body: null
+    },
+    {
+        name: 'Mariella Smith',
+        fName: '',
+        lName: '',
+        title: 'District 5, Countywide',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '',
+        fax: '',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=5',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/media-center/images/commissioners/mariella-smith-web.jpg',
+        bannerImgSrc: null,
+        aides: [],
+        boards: [],
+        body: null
+    },
+    {
+        name: 'Pat Kemp',
+        fName: '',
+        lName: '',
+        title: 'District 6, Countywide, Vice Chair',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '',
+        fax: '',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=6',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/commissioners/becknerk-3/pat-kemp-portrait.jpg',
+        bannerImgSrc: null,
+        aides: [],
+        boards: [],
+        body: null
+    },
+    {
+        name: 'Kimberly Overman',
+        fName: '',
+        lName: '',
+        title: 'District 7, Countywide',
+        mailingAddress: '601 E. Kennedy Blvd. Tampa, FL 33602',
+        phone: '',
+        fax: '',
+        contactFormLink: 'https://hcflgov.formstack.com/forms/contact_commissioner?field51883190=7',
+        imgSrc: 'https://www.hillsboroughcounty.org/library/hillsborough/media-center/images/commissioners/overman-full-hcflgovnet.jpg',
+        bannerImgSrc: null,
+        aides: [],
+        boards: [],
+        body: null
+    },
+]

@@ -24,7 +24,7 @@
         {{ excerpt }}
       </div>
 
-      <span class="text-muted small">Posted {{ publishDate.toLocaleString() }} in {{ category }}</span>
+      <span class="text-muted small">Posted {{ new Date(publishDate).toLocaleString() }} in {{ category }}</span>
 
     </div>
 

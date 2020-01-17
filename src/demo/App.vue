@@ -3,7 +3,7 @@
     <header>
       <!-- alerts -->
       <aside
-        v-if="showAlert"
+        v-if="alert"
         class="alert alert-dark bg-danger v-card mb-1 text-white gradient-diag-danger mb-0 alert-dismissible fade show"
         role="alert"
       >
@@ -26,7 +26,13 @@
       <nav is="hc-navbar" logo-href="./" skip-content-link="#main-content" class="v-card"></nav>
 
       <!-- jumbo -->
-      <ol v-if="showBanner" is="hc-banner" :gradient="bannerGradient" :title="pageTitle">
+      <ol
+        v-if="banner"
+        is="hc-banner"
+        :gradient="bannerGradient"
+        :img-src="bannerImage"
+        :title="pageTitle"
+      >
         <li class="breadcrumb-item">
           <a href="./">Home</a>
         </li>
@@ -37,31 +43,24 @@
     <router-view :key="$route.fullPath"></router-view>
 
     <!-- footer -->
-    <footer is="hc-footer" class="mt-auto" :show-feedback-form="showFeedbackForm"></footer>
+    <footer is="hc-footer" class="mt-auto" :show-feedback-form="feedbackForm"></footer>
 
     <!-- demo options -->
     <aside class="fixed-bottom" aria-label="Demo Options">
-      <button @click="$store.commit('toggleDemoBar')" class="btn btn-sm btn-dark">Demo Options</button>
+      <button @click="toggleDemoBar" class="btn btn-sm btn-dark">Demo Options</button>
 
-      <DemoOptions v-if="showDemoBar" />
+      <DemoOptions v-if="demoBar" />
     </aside>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import storeMixin from '@/demo/store/mixins'
 import DemoOptions from './components/DemoOptions'
 
 export default {
-  components: { DemoOptions },
+  mixins: [storeMixin],
 
-  computed: mapState([
-    'showAlert',
-    'showBanner',
-    'showDemoBar',
-    'showFeedbackForm',
-    'bannerGradient',
-    'pageTitle'
-  ])
+  components: { DemoOptions }
 }
 </script>

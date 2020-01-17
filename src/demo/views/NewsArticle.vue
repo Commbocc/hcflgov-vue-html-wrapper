@@ -13,7 +13,7 @@
       </div>
 
       <!-- video -->
-      <div v-if="true" class="container embed-responsive embed-responsive-16by9 mb-3">
+      <div v-if="showVideo" class="container embed-responsive embed-responsive-16by9 mb-3">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
       </div>
 
@@ -45,7 +45,7 @@
                 <a  v-for="(item, i) in relatedArticles" :key="i" href="#" class="list-group-item list-group-item-action small">
                   <h6 class="mb-0">{{ item.Heading }}</h6>
                   <em clsas="small">{{ item.SubHeading }}</em>
-                  <span class="text-muted small d-block">{{ item.PublishDate.toLocaleString() }}</span>
+                  <span class="text-muted small d-block">{{ new Date(item.PublishDate).toLocaleString() }}</span>
                 </a>
               </div>
             </div>
@@ -62,7 +62,7 @@
             <hr>
 
           </div>
-          
+
 
         </div>
 
@@ -77,7 +77,7 @@
           <a href="#" class="p-2 m-1 v-card badge badge-light text-muted">
             <span class="lead fab fa-fw fa-linkedin"></span>
           </a>
-        </aside>  
+        </aside>
 
       </div>
     </section>
@@ -85,12 +85,13 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
+import storeMixin from '@/demo/store/mixins'
 import SitecoreContentItemMixin from '@/mixins/Sitecore/ContentItem'
-import posts from '../store/data/posts'
+import posts from '../store/modules/data/articles'
 
 export default {
-  mixins: [SitecoreContentItemMixin],
+  mixins: [storeMixin, SitecoreContentItemMixin],
 
   props: {
     sitecoreItem: {
@@ -99,20 +100,16 @@ export default {
   },
 
   mounted() {
-    this.showBanner()
     this.setPageTitle(this.heading)
-    this.showFeedbackForm()
-    this.relatedArticles = this.posts.slice(0, 4)
+    this.relatedArticles = posts.slice(0, 4)
   },
 
   data: () => ({
     relatedArticles: []
   }),
 
-  methods: mapMutations(['setPageTitle', 'showFeedbackForm', 'showBanner']),
-
-  computed: {
-    ...mapGetters(['posts'])
-  }
+  computed: mapState({
+    showVideo: state => state.newsarticle.showVideo
+  })
 }
 </script>

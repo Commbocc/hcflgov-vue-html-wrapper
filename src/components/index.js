@@ -7,8 +7,8 @@ export default {
     HcAccordionItem:          () => import('./Accordion/Item'),
     HcBanner:                 () => import('./Banner/Banner'),
     HcCardNews:               () => import('./Cards/News'),
+    HcCommissionerCirlces:    () => import('./CommissionerCirlces'),
     HcFooter:                 () => import('./Footer/Footer'),
-    HcWasThisPageHelpful:     () => import('./Footer/WasThisPageHelpful'),
     HcHtvYoutubeLive:         () => import('./Htv/YoutubeLive'),
     HcIconBtn:                () => import('./IconButton'),
     HcNavbar:                 () => import('./Navbar/Navbar'),
@@ -18,5 +18,6 @@ export default {
     HcSearchFilters:          () => import('./Search/Filters'),
     HcTabs:                   () => import('./Tabs/Tabs'),
     HcTab:                    () => import('./Tabs/Tab'),
+    HcWasThisPageHelpful:     () => import('./Footer/WasThisPageHelpful'),
   }
 }

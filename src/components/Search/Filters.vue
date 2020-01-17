@@ -16,7 +16,7 @@
     <ul v-show="filters" ref="filterAcc" is="hc-accordion" multiple flush class="small">
       <li is="hc-accordion-item">
         <span class="text-muted m-0" slot="header">Types</span>
-        <div v-for="n in 5" class="form-check">
+        <div v-for="n in 5" :key="n" class="form-check">
           <input class="form-check-input" type="checkbox" value="" :id="`defaultCheck${n}`">
           <label class="form-check-label" :for="`defaultCheck${n}`">
             Filter checkbox {{ n }}
@@ -25,7 +25,7 @@
       </li>
       <li is="hc-accordion-item">
         <span class="text-muted m-0" slot="header">Categories</span>
-        <div v-for="n in 5" class="form-check">
+        <div v-for="n in 5" :key="n" class="form-check">
           <input class="form-check-input" type="checkbox" value="" :id="`defaultCheck${n}`">
           <label class="form-check-label" :for="`defaultCheck${n}`">
             Filter checkbox {{ n }}
@@ -34,7 +34,7 @@
       </li>
       <li is="hc-accordion-item">
         <span class="text-muted m-0" slot="header">Keywords</span>
-        <div v-for="n in 5" class="form-check">
+        <div v-for="n in 5" :key="n" class="form-check">
           <input class="form-check-input" type="checkbox" value="" :id="`defaultCheck${n}`">
           <label class="form-check-label" :for="`defaultCheck${n}`">
             Filter checkbox {{ n }}
@@ -44,7 +44,7 @@
       <li is="hc-accordion-item">
         <span class="text-muted m-0" slot="header">Sorting</span>
 
-        <div v-for="n in 5" class="form-check">
+        <div v-for="n in 5" :key="n" class="form-check">
           <input class="form-check-input" name="orderRadio" type="radio" value="" :id="`defaultRadio${n}`">
           <label class="form-check-label" :for="`defaultRadio${n}`">
             Sort radio {{ n }}

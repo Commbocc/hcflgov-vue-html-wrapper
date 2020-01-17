@@ -24,7 +24,7 @@
       <legend class="sr-only">Filters</legend>
 
       <div class="d-flex justify-content-center">
-        <div v-for="filter in filters" class="form-check form-check-inline small">
+        <div v-for="filter in filters" :key="filter.key" class="form-check form-check-inline small">
           <input class="form-check-input" type="checkbox" name="t" :id="`search-filter-${filter.key}`" :value="filter.key" :checked="filter.checked" :aria-label="filter.text">
           <label class="form-check-label" :for="`search-filter-${filter.key}`">
             <span class="fa-fw" :class="filter.icon" aria-hidden="true"></span>
