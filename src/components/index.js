@@ -11,6 +11,7 @@ export default {
     HcFooter:                 () => import('./Footer/Footer'),
     HcHtvYoutubeLive:         () => import('./Htv/YoutubeLive'),
     HcIconBtn:                () => import('./IconButton'),
+    HcItemCard:               () => import('./Cards/Item'),
     HcNavbar:                 () => import('./Navbar/Navbar'),
     HcPagination:             () => import('./Pagination'),
     HcParallax:               () => import('./Parallax'),
