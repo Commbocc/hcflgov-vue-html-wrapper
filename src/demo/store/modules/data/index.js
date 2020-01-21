@@ -5,7 +5,8 @@ export default {
         articles: [],
         posts: [],
         events: [],
-        commissioners: []
+        commissioners: [],
+        locations: null
     },
     mutations: {
         setArticles(state, data) {
@@ -19,6 +20,9 @@ export default {
         },
         setCommissioners(state, data) {
             state.commissioners = data
+        },
+        setLocations(state, data) {
+            state.locations = data
         }
     },
     actions: {
@@ -43,6 +47,10 @@ export default {
         async fetchCommissioners({ commit }) {
             let { default: data } = await import('./commissioners')
             commit('setCommissioners', data)
+        },
+        async fetchLocations({ commit }) {
+            let { default: data } = await import('./locations')
+            commit('setLocations', data)
         }
     }
 }

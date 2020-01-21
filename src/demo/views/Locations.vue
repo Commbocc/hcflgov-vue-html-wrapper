@@ -1,10 +1,15 @@
 <template>
-  <main>
+  <main v-if="$store.state.data.locations">
     <div class="d-flex flex-column flex-sm-row">
       <!-- location map -->
-      <div is="HcLocationsMap" class="order-sm-12">HcLocationsMap</div>
+      <HcLocationsMap
+        ref="LocationsMap"
+        :locations="$store.state.data.locations"
+        @scroll-to="scrollToInList"
+        class="order-sm-12"
+      />
 
-      <div class="flex-fill">
+      <div class="flex-fill order-sm-1">
         <header>
           <ol
             v-if="true"
@@ -22,7 +27,11 @@
         <section class="py-5">
           <div class="container">
             <!-- location list -->
-            <div is="HcLocationsList">HcLocationsList</div>
+            <HcLocationsList
+              ref="LocationsList"
+              :locations="$store.state.data.locations"
+              @show-in-map="showInMap"
+            />
           </div>
         </section>
       </div>
@@ -39,6 +48,19 @@ export default {
   mounted() {
     this.showBanner(false)
     this.setPageTitle('Locations')
+    this.fetchLocations()
+  },
+
+  methods: {
+    showInMap(place, mobile = false) {
+      if (mobile) {
+        this.$refs.LocationsMap.showMobileControls = true
+      }
+      this.$refs.LocationsMap.activePlace = place
+    },
+    scrollToInList(place) {
+      this.$refs.LocationsList.scrollTo(place)
+    }
   }
 }
 </script>

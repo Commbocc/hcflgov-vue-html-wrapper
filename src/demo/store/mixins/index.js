@@ -27,7 +27,8 @@ export default {
             'fetchArticles',
             'fetchPosts',
             'fetchEvents',
-            'fetchCommissioners'
+            'fetchCommissioners',
+            'fetchLocations'
         ])
     },
 

@@ -1,0 +1,222 @@
+{
+    "pagination": {
+        "current": 1,
+        "previous": null,
+        "next": 2,
+        "per_page": 15,
+        "pages": 18,
+        "count": 261
+    },
+    "collection": [
+        {
+            "id": 12,
+            "name": "Alafia River Boat Ramp",
+            "address": "4104 Alafia Blvd. Brandon FL 33511",
+            "coordinates": {
+                "lat": 27.880485126639197,
+                "lng": -82.29878843652676
+            },
+            "created_at": "2019-09-20T13:40:25.598Z",
+            "updated_at": "2019-09-20T21:04:44.771Z",
+            "guid": "{241D71FF-6767-4828-BA5C-8DC56D226A6D}",
+            "imgSrc": "https://picsum.photos/seed/12/800",
+            "url": "http://localhost:3000/locations/places/12"
+        },
+        {
+            "id": 13,
+            "name": "Alafia River Corridor Nature Preserve North",
+            "address": "9256 South County Rd. 39 Plant City FL 33567",
+            "coordinates": {
+                "lat": 27.871271460557303,
+                "lng": -82.13593837059047
+            },
+            "created_at": "2019-09-20T13:40:25.610Z",
+            "updated_at": "2019-09-20T21:04:44.779Z",
+            "guid": "{FD9649B8-6A94-4C32-BE4F-958E490906C0}",
+            "imgSrc": "https://picsum.photos/seed/13/800",
+            "url": "http://localhost:3000/locations/places/13"
+        },
+        {
+            "id": 14,
+            "name": "Alafia River Corridor Nature Preserve South",
+            "address": "931 Old Welcome Rd. Lithia FL 33547",
+            "coordinates": {
+                "lat": 27.82685652899768,
+                "lng": -82.13275843176152
+            },
+            "created_at": "2019-09-20T13:40:25.616Z",
+            "updated_at": "2019-09-20T21:04:44.782Z",
+            "guid": "{0FEA0C03-21F9-4801-8E33-46D2FA4185A5}",
+            "imgSrc": "https://picsum.photos/seed/14/800",
+            "url": "http://localhost:3000/locations/places/14"
+        },
+        {
+            "id": 15,
+            "name": "Alafia Scrub Nature Preserve",
+            "address": "10243 Elbow Bend Road Riverview FL 33578",
+            "coordinates": {
+                "lat": 27.861018517889182,
+                "lng": -82.33586991618097
+            },
+            "created_at": "2019-09-20T13:40:25.622Z",
+            "updated_at": "2019-09-20T21:04:44.784Z",
+            "guid": "{361582C6-3C99-41BE-A0F5-A9D64DF84426}",
+            "imgSrc": "https://picsum.photos/seed/15/800",
+            "url": "http://localhost:3000/locations/places/15"
+        },
+        {
+            "id": 16,
+            "name": "Aldermans Ford Conservation Park",
+            "address": "100 Alderman's Ford Park Dr. Plant City, FL FL 33567",
+            "coordinates": {
+                "lat": 27.87023475342656,
+                "lng": -82.13771251370619
+            },
+            "created_at": "2019-09-20T13:40:25.636Z",
+            "updated_at": "2019-09-20T21:04:44.786Z",
+            "guid": "{57EBD661-9696-4EA6-87CD-781A8A65C758}",
+            "imgSrc": "https://picsum.photos/seed/16/800",
+            "url": "http://localhost:3000/locations/places/16"
+        },
+        {
+            "id": 17,
+            "name": "Aldermans Ford Solid Waste Facility",
+            "address": "9402 County Road 39 Plant City FL 33567",
+            "coordinates": {
+                "lat": 27.870234114062963,
+                "lng": -82.13768656420586
+            },
+            "created_at": "2019-09-20T13:40:25.642Z",
+            "updated_at": "2019-09-20T21:04:44.788Z",
+            "guid": "{5B530744-1C32-47E8-B8D9-ED308391A09B}",
+            "imgSrc": "https://picsum.photos/seed/17/800",
+            "url": "http://localhost:3000/locations/places/17"
+        },
+        {
+            "id": 18,
+            "name": "Alexander Park",
+            "address": "5602 N. Lois Ave Tampa FL 33614",
+            "coordinates": {
+                "lat": 27.99806361226845,
+                "lng": -82.51350209469639
+            },
+            "created_at": "2019-09-20T13:40:25.649Z",
+            "updated_at": "2019-09-20T21:04:44.792Z",
+            "guid": "{928D3650-964A-479F-9632-7D916D084BD1}",
+            "imgSrc": "https://picsum.photos/seed/18/800",
+            "url": "http://localhost:3000/locations/places/18"
+        },
+        {
+            "id": 19,
+            "name": "All Peoples Life Center",
+            "address": "6105 E. Sligh Ave. Tampa FL 33617",
+            "coordinates": {
+                "lat": 28.010698484420377,
+                "lng": -82.38636207328744
+            },
+            "created_at": "2019-09-20T13:40:25.655Z",
+            "updated_at": "2019-09-20T21:04:44.794Z",
+            "guid": "{999A1B9D-7D5B-4C70-A6F0-1A646F24D8CA}",
+            "imgSrc": "https://picsum.photos/seed/19/800",
+            "url": "http://localhost:3000/locations/places/19"
+        },
+        {
+            "id": 20,
+            "name": "All Persons Rotary Park",
+            "address": "800 S. Parsons Road Brandon FL 33511",
+            "coordinates": {
+                "lat": 27.92806065889549,
+                "lng": -82.28576053915388
+            },
+            "created_at": "2019-09-20T13:40:25.662Z",
+            "updated_at": "2019-09-20T21:04:44.798Z",
+            "guid": "{99FB2681-780E-486E-B863-C3992E551622}",
+            "imgSrc": "https://picsum.photos/seed/20/800",
+            "url": "http://localhost:3000/locations/places/20"
+        },
+        {
+            "id": 21,
+            "name": "Antioch Sports Complex",
+            "address": "8486 Franklin Road Plant City FL 33565",
+            "coordinates": {
+                "lat": 28.08361094181153,
+                "lng": -82.24156752858279
+            },
+            "created_at": "2019-09-20T13:40:25.676Z",
+            "updated_at": "2019-09-20T21:04:44.800Z",
+            "guid": "{F2E42894-FC78-408E-8C96-BE1FDEF9F6FE}",
+            "imgSrc": "https://picsum.photos/seed/21/800",
+            "url": "http://localhost:3000/locations/places/21"
+        },
+        {
+            "id": 22,
+            "name": "Apollo Beach Dog Park",
+            "address": "664 Golf and Sea Blvd. Apollo Beach FL 33572",
+            "coordinates": {
+                "lat": 27.765738511686365,
+                "lng": -82.41240263018628
+            },
+            "created_at": "2019-09-20T13:40:25.687Z",
+            "updated_at": "2019-09-20T21:04:44.802Z",
+            "guid": "{B7FD5D29-E77C-4373-9878-6E9C409895DB}",
+            "imgSrc": "https://picsum.photos/seed/22/800",
+            "url": "http://localhost:3000/locations/places/22"
+        },
+        {
+            "id": 23,
+            "name": "Apollo Beach Park and Recreation Center",
+            "address": "664 Golf and Sea Blvd. Apollo Beach FL 33572",
+            "coordinates": {
+                "lat": 27.765738511686365,
+                "lng": -82.41240263018628
+            },
+            "created_at": "2019-09-20T13:40:25.701Z",
+            "updated_at": "2019-09-20T21:04:44.804Z",
+            "guid": "{355759F1-C827-4242-887D-1736F4383263}",
+            "imgSrc": "https://picsum.photos/seed/23/800",
+            "url": "http://localhost:3000/locations/places/23"
+        },
+        {
+            "id": 24,
+            "name": "Apollo Beach Preserve",
+            "address": "6760 Surfside Blvd. Apollo Beach FL 33572",
+            "coordinates": {
+                "lat": 27.790311981129882,
+                "lng": -82.41988447654225
+            },
+            "created_at": "2019-09-20T13:40:25.716Z",
+            "updated_at": "2019-09-20T21:04:44.807Z",
+            "guid": "{ADF08158-B6F1-46F8-BCF6-FD7FCF96147F}",
+            "imgSrc": "https://picsum.photos/seed/24/800",
+            "url": "http://localhost:3000/locations/places/24"
+        },
+        {
+            "id": 25,
+            "name": "Apollo Beach Skate Park",
+            "address": "664 Golf and Sea Blvd. Apollo Beach FL 33572",
+            "coordinates": {
+                "lat": 27.765738511686365,
+                "lng": -82.41240263018628
+            },
+            "created_at": "2019-09-20T13:40:25.732Z",
+            "updated_at": "2019-09-20T21:04:44.809Z",
+            "guid": "{7F82504D-8B2F-4A4F-B1DD-AF2A49150E33}",
+            "imgSrc": "https://picsum.photos/seed/25/800",
+            "url": "http://localhost:3000/locations/places/25"
+        },
+        {
+            "id": 26,
+            "name": "AQUA Senior Nutrition Center",
+            "address": "4505 N. Rome Ave. Tampa FL 33603",
+            "coordinates": {
+                "lat": 27.98261283374692,
+                "lng": -82.47651938250968
+            },
+            "created_at": "2019-09-20T13:40:25.738Z",
+            "updated_at": "2019-09-20T21:04:44.811Z",
+            "guid": "{2FF630E8-0A02-43A8-BFA5-978BFDD4B91F}",
+            "imgSrc": "https://picsum.photos/seed/26/800",
+            "url": "http://localhost:3000/locations/places/26"
+        }
+    ]
+}
