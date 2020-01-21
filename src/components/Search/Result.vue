@@ -24,7 +24,7 @@
           <span class="text-muted small">Posted {{ publishDate.toLocaleString() }} in {{ category }}</span>
 
         </div>
-      </div>
+      </div>y
 
       <div v-if="hasImg" class="d-none d-sm-block col-sm-3">
         <div class="h-100 d-flex align-items-end justify-content-end text-right" :style="`background: url(${imgSrc}); background-size: cover; background-position: center center`">

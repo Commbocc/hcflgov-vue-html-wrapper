@@ -46,6 +46,11 @@ export const routes = [
     name: 'Commissioner',
     component: () => import('../views/Commissioner.vue')
   },
+  {
+    path: '/locations',
+    name: 'Locations',
+    component: () => import('../views/Locations.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'about',
