@@ -15,11 +15,17 @@
 
         <p class="font-italic text-muted small">{{ place.address }}</p>
 
-        <a href="#" class="small d-sm-none" @click.prevent="$emit('show-in-map', place, true)">Show in Map</a>
+        <a
+          href="#"
+          class="small d-sm-none"
+          @click.prevent="$emit('show-in-map', place, true)"
+        >Show in Map</a>
 
         <div class="p-3 p-md-5">
           <div class="embed-responsive embed-responsive-1by1 bg-info">
-            <img :src="place.imgSrc" alt class="embed-responsive-item img-fluid" />
+            <a :href="place.url">
+              <img :src="place.imgSrc" alt class="embed-responsive-item img-fluid" />
+            </a>
           </div>
         </div>
 

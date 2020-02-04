@@ -51,6 +51,11 @@ export const routes = [
     name: 'Locations',
     component: () => import('../views/Locations.vue')
   },
+  {
+    path: '/locations/1',
+    name: 'Location',
+    component: () => import('../views/Location.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'about',
