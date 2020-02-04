@@ -18,6 +18,10 @@
 // vuetify
 @import "vuetify/buttons";
 
+.v-btn {
+  text-transform: none;
+}
+
 .btn:not(.btn-link) {
   @extend .v-btn;
 
