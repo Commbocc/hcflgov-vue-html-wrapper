@@ -62,13 +62,13 @@
                 href="/htvlive"
                 class="btn btn-outline-light text-dark btn-sm"
                 target="_blank"
-              >Live Meetings</a>&nbsp;&nbsp;
+              >Live Meetings</a>
               <a
                 rel="noopener noreferrer"
                 href="http://www.youtube.com/playlist?list=PLB28DFA90CD9600F1"
                 target="_blank"
                 class="btn btn-outline-light text-dark btn-sm"
-              >Commissioner's YouTube Playlist&nbsp;</a>
+              >Commissioner's YouTube Playlist</a>
               <a
                 rel="noopener noreferrer"
                 href="http://www.sandymurman.com/news-letters/"
